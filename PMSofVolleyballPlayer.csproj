@@ -7,4 +7,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="DataLogic\**" />
+    <EmbeddedResource Remove="DataLogic\**" />
+    <None Remove="DataLogic\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitattributes" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="DataLogic\DataLogic.csproj" />
+  </ItemGroup>
+
 </Project>
