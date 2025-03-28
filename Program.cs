@@ -25,7 +25,7 @@ namespace PMSofVolleyballPlayer
 
                 if (username != adminUsername || password != adminPassword)
                 {
-                    Console.WriteLine("\n\t********** ERROR: Incorrect username or password. Try again. ****");
+                    Console.WriteLine("\n\t********** ERROR: Incorrect username or password. Try again. **********");
                 }
                 else
                 {
@@ -50,7 +50,7 @@ namespace PMSofVolleyballPlayer
                 Console.Write("\nEnter your choice: ");
                 if (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 5)
                 {
-                    Console.WriteLine("\n\t********** Invalid input: Choose a number between 1-5. ****");
+                    Console.WriteLine("\n\t********** Invalid input: Choose a number between 1-5.**********");
                     continue;
                 }
 
@@ -98,7 +98,7 @@ namespace PMSofVolleyballPlayer
                     return input;
                 }
 
-                Console.WriteLine("\n\t********** ERROR: Input cannot be null or empty. Please enter a valid value. ******");
+                Console.WriteLine("\n\t********** ERROR: Input cannot be null or empty. Please enter a valid value.**********");
             }
         }
 
@@ -132,7 +132,7 @@ namespace PMSofVolleyballPlayer
 
             if (playerService.GetPlayerCount() == 0)
             {
-                Console.WriteLine("\n\t********** No profiles available. Create a profile first. ****");
+                Console.WriteLine("\n\t********** No profiles available. Create a profile first. **********");
                 return;
             }
 
@@ -146,7 +146,7 @@ namespace PMSofVolleyballPlayer
                 {
                     break;
                 }
-                Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. ****");
+                Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
             }
 
             string name = GetValidInput("Enter new name: ");
@@ -176,7 +176,7 @@ namespace PMSofVolleyballPlayer
             var players = playerService.GetAllPlayers();
             if (players.Count == 0)
             {
-                Console.WriteLine("\n\t********** No profiles available. ****");
+                Console.WriteLine("\n\t********** No profiles available. **********");
                 return;
             }
 
@@ -193,17 +193,19 @@ namespace PMSofVolleyballPlayer
             Console.WriteLine("\nYou selected >>> DELETE PROFILE <<< ");
             if (playerService.GetPlayerCount() == 0)
             {
-                Console.WriteLine("\n\t********** No profiles available to delete. ****");
+                Console.WriteLine("\n\t********** No profiles available to delete. **********");
                 return;
             }
 
             ViewProfile(); //Calling the View Profile Method
+
             Console.Write("\nEnter the index number of the player to delete: ");
 
             if (int.TryParse(Console.ReadLine(), out int index) && playerService.DeletePlayer(index))
+
                 Console.WriteLine("\n\t---------------- Player's Profile DELETED successfully! ----------------");
             else
-                Console.WriteLine("\n\t********** ERROR: Invalid index. ****");
+                Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
         }
     }
 }
