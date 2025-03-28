@@ -1,5 +1,5 @@
-﻿using System;
-using DataLogic;
+﻿using DataLogic;
+using System;
 
 namespace PMSofVolleyballPlayer
 {
@@ -187,6 +187,7 @@ namespace PMSofVolleyballPlayer
             }
         }
 
+
         //METHOD FOR DELETE PROFILE
         static void DeleteProfile()
         {
@@ -197,15 +198,30 @@ namespace PMSofVolleyballPlayer
                 return;
             }
 
-            ViewProfile(); //Calling the View Profile Method
+            ViewProfile(); // Calling the View Profile Method
 
-            Console.Write("\nEnter the index number of the player to delete: ");
+            int index;
+            while (true) 
+            {
+                Console.Write("\nEnter the index number of the player to delete: ");
+                if (int.TryParse(Console.ReadLine(), out index) && index >= 0 && index < playerService.GetPlayerCount())
+                {
+                    if (playerService.DeletePlayer(index))
+                    {
+                        Console.WriteLine("\n\t---------------- Player's Profile DELETED successfully! ----------------");
+                        break; 
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\t********** ERROR: Could not delete profile. Try again. **********");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
+                }
+            }
 
-            if (int.TryParse(Console.ReadLine(), out int index) && playerService.DeletePlayer(index))
-
-                Console.WriteLine("\n\t---------------- Player's Profile DELETED successfully! ----------------");
-            else
-                Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
         }
     }
 }
