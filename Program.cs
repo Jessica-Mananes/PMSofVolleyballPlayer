@@ -106,6 +106,7 @@ namespace PMSofVolleyballPlayer
         static void CreateProfile()
         {
             Console.WriteLine("\nYou selected >>> CREATE PROFILE <<< ");
+            Console.WriteLine("Please Enter a Name, Age, and Position of the player.\n");
             string name = GetValidInput("Enter a player name: ");
 
             int age;
