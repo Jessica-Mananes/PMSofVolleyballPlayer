@@ -1,12 +1,25 @@
-﻿using DataLogic;
+﻿using VolleyballPMS;
 using System;
 using System.Collections.Generic;
 
-namespace DataLogic
-
+namespace VolleyballPMS
 {
     public class PlayerService
     {
+        public class Player
+        {
+            public string Name;
+            public int Age;
+            public string Position;
+
+            public Player(string name, int age, string position)
+            {
+                this.Name = name;
+                this.Age = age;
+                this.Position = position;
+            }
+        }
+
         private readonly List<Player> playersList = new();
 
         public bool AddPlayer(string name, int age, string position)

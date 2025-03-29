@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="DataLogic\DataLogic.csproj" />
+    <ProjectReference Include="DataLogic\VolleyballPMS.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSofVolleyballPlayer", "PMSofVolleyballPlayer.csproj", "{C867AE90-50B0-4060-BB15-00AE9CA547CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLogic", "DataLogic\DataLogic.csproj", "{5BC55781-9C7F-C627-8A43-7AFC698F058F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolleyballPMS", "DataLogic\VolleyballPMS.csproj", "{5BC55781-9C7F-C627-8A43-7AFC698F058F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
