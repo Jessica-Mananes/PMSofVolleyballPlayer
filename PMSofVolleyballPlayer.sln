@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitattributes = .gitattributes
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSDataPlayer", "..\PMSDataPlayer\PMSDataPlayer.csproj", "{5E0A850A-7924-4B49-B075-0BE8EB2185F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{5BC55781-9C7F-C627-8A43-7AFC698F058F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BC55781-9C7F-C627-8A43-7AFC698F058F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BC55781-9C7F-C627-8A43-7AFC698F058F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E0A850A-7924-4B49-B075-0BE8EB2185F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E0A850A-7924-4B49-B075-0BE8EB2185F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E0A850A-7924-4B49-B075-0BE8EB2185F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E0A850A-7924-4B49-B075-0BE8EB2185F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
