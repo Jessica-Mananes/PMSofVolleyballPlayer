@@ -42,8 +42,8 @@ namespace PMSofVolleyballPlayer
 
                 if (loginAttempts >= maxAttempts)
                 {
-                    Console.WriteLine("\nSorry... Too many failed attempts.\n");
-                    Console.Write("Do you want to change your [username], [password], or [both]?: ");
+                    Console.WriteLine("\nSorry... Too many login failed.\n");
+                    Console.Write("To reset your account: Would you like to change your [username], [password], or [both]?: ");
                     string changeOption = Console.ReadLine()?.ToLower();
 
                     switch (changeOption)
@@ -78,7 +78,8 @@ namespace PMSofVolleyballPlayer
             } while (true);
 
             //OPTIONS
-            string[] options = { "[1] Create Profile", "[2] Edit Profile", "[3] View Profile", "[4] Delete Profile", "[5] Exit Program" };
+            string[] options = { "[1] Create Profile", "[2] Edit Profile", "[3] View Profile", "[4] Delete Profile", "[5] Search Profile","[6] Exit Program" };
+
             int choice;
 
             do //DO-WHILE FOR SELECTING OPTIONS, IF OPTION 5 IS NOT SELECTED THE LOOP WILL CONTINUE TO EXECUTE.
@@ -92,9 +93,9 @@ namespace PMSofVolleyballPlayer
                 }
 
                 Console.Write("\nEnter your choice: ");
-                if (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 5)
+                if (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 6)
                 {
-                    Console.WriteLine("\n\t********** Invalid input: Choose a number between 1-5.**********");
+                    Console.WriteLine("\n\t********** Invalid input: Choose a number between 1-6.**********");
                     continue;
                 }
 
@@ -113,17 +114,20 @@ namespace PMSofVolleyballPlayer
                         DeleteProfile();
                         break;
                     case 5:
+                        SearchProfile();
+                        break;
+                    case 6:
                         Console.WriteLine("\nEXITING THE PROGRAM.");
                         Environment.Exit(0);
                         break;
                 }
 
-                if (choice != 5)
+                if (choice != 6)
                 {
                     Console.WriteLine("\n*Press any key to continue* ");
                     Console.ReadKey();
                 }
-            } while (choice != 5);
+            } while (choice != 6);
         }
 
         //--------------------METHODS---------------------//
@@ -229,6 +233,33 @@ namespace PMSofVolleyballPlayer
             for (int i = 0; i < players.Count; i++)
             {
                 Console.WriteLine($"[{i}] Name: {players[i].Name} | Age: {players[i].Age} | Position: {players[i].Position}");
+            }
+        }
+
+        //METHOD FOR SEARCH PROFILE
+        static void SearchProfile()
+        {
+            Console.WriteLine("\nYou selected >>> SEARCH PROFILE <<< ");
+
+            string keyword = GetValidInput("Enter name to search: ").ToLower();
+            var players = playerService.GetAllPlayers();
+
+            bool found = false;
+
+            Console.WriteLine("\n---------------- Search Results ----------------");
+
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (players[i].Name.ToLower().Contains(keyword))
+                {
+                    Console.WriteLine($"[{i}] Name: {players[i].Name} | Age: {players[i].Age} | Position: {players[i].Position}");
+                    found = true;
+                }
+            }
+
+            if (!found)
+            {
+                Console.WriteLine("\n\t********** No players found matching that name. **********");
             }
         }
 
