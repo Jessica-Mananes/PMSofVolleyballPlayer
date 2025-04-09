@@ -78,7 +78,7 @@ namespace PMSofVolleyballPlayer
             } while (true);
 
             //OPTIONS
-            string[] options = { "[1] Create Profile", "[2] Edit Profile", "[3] View Profile", "[4] Delete Profile", "[5] Search Profile","[6] Exit Program" };
+            string[] options = { "[1] Create Profile", "[2] Edit Profile", "[3] View Profile", "[4] Delete Profile", "[5] Search Profile", "[6] Exit Program" };
 
             int choice;
 
@@ -198,25 +198,53 @@ namespace PMSofVolleyballPlayer
                 Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
             }
 
-            string name = GetValidInput("Enter new name: ");
+            Console.WriteLine("\nWhat would you like to edit?");
+            Console.WriteLine("[1] Name\n[2] Age\n[3] Position\n[4] All");
+            Console.Write("Enter your choice: ");
+            string editChoice = Console.ReadLine();
 
-            int age;
-            while (true)
+            var player = playerService.GetPlayerByIndex(index);
+            string newName = player.Name;
+            int newAge = player.Age;
+            string newPosition = player.Position;
+
+            switch (editChoice)
             {
-                Console.Write("Enter new age: ");
-                if (int.TryParse(Console.ReadLine(), out age) && age > 0)
-                {
+                case "1":
+                    newName = GetValidInput("Enter new name: ");
                     break;
-                }
-                Console.WriteLine("\n\t********** ERROR: Please enter a valid positive number for age. **********\n");
+                case "2":
+                    while (true)
+                    {
+                        Console.Write("Enter new age: ");
+                        if (int.TryParse(Console.ReadLine(), out newAge) && newAge > 0)
+                            break;
+                        Console.WriteLine("\n\t********** ERROR: Invalid age. **********");
+                    }
+                    break;
+                case "3":
+                    newPosition = GetValidInput("Enter new position: ");
+                    break;
+                case "4":
+                    newName = GetValidInput("Enter new name: ");
+                    while (true)
+                    {
+                        Console.Write("Enter new age: ");
+                        if (int.TryParse(Console.ReadLine(), out newAge) && newAge > 0)
+                            break;
+                        Console.WriteLine("\n\t********** ERROR: Invalid age. **********");
+                    }
+                    newPosition = GetValidInput("Enter new position: ");
+                    break;
+                default:
+                    Console.WriteLine("\n\t********** Invalid choice. Cancelling edit. **********");
+                    return;
             }
 
-            string position = GetValidInput("Enter new position (e.g. Spiker, Libero, Setter): ");
-
-            if (playerService.EditPlayer(index, name, age, position))
+            if (playerService.EditPlayer(index, newName, newAge, newPosition))
                 Console.WriteLine("\n\t---------------- Player's Profile UPDATED successfully! ----------------");
             else
-                Console.WriteLine("\n\t********** ERROR: Could not update profile. ****");
+                Console.WriteLine("\n\t********** ERROR: Could not update profile. **********");
         }
 
         //METHOD FOR VIEW PROFILE
