@@ -18,6 +18,10 @@ namespace PMSofVolleyballPlayer
             string adminPassword = "jess";
             string username, password;
 
+            int loginAttempts = 0;
+            const int maxAttempts = 3;
+
+
             do //DO-WHILE LOOP FOR LOGGING IN
             {
                 Console.Write("\nEnter username: ");
@@ -26,15 +30,52 @@ namespace PMSofVolleyballPlayer
                 Console.Write("Enter password: ");
                 password = Console.ReadLine();
 
-                if (username != adminUsername || password != adminPassword)
-                {
-                    Console.WriteLine("\n\t********** ERROR: Incorrect username or password. Try again. **********");
-                }
-                else
+                if (username == adminUsername && password == adminPassword)
+
                 {
                     Console.WriteLine("\n\t---------------- LOGIN SUCCESSFUL ----------------");
+                    break;
                 }
-            } while (username != adminUsername || password != adminPassword);
+
+                loginAttempts++;
+                Console.WriteLine($"\n\t [ERROR]: Incorrect username or password. [WARNING] Attempts left: << {maxAttempts - loginAttempts} >> ");
+
+                if (loginAttempts >= maxAttempts)
+                {
+                    Console.WriteLine("\nSorry... Too many failed attempts.\n");
+                    Console.Write("Do you want to change your [username], [password], or [both]?: ");
+                    string changeOption = Console.ReadLine()?.ToLower();
+
+                    switch (changeOption)
+                    {
+                        case "username":
+                            Console.Write("Enter new username: ");
+                            adminUsername = Console.ReadLine();
+                            Console.WriteLine("\n\t Username changed successfully.");
+                            break;
+
+                        case "password":
+                            Console.Write("Enter new password: ");
+                            adminPassword = Console.ReadLine();
+                            Console.WriteLine("\n\t Password changed successfully.");
+                            break;
+
+                        case "both":
+                            Console.Write("Enter new username: ");
+                            adminUsername = Console.ReadLine();
+                            Console.Write("Enter new password: ");
+                            adminPassword = Console.ReadLine();
+                            Console.WriteLine("\n\t Username and password changed successfully.");
+                            break;
+
+                        default:
+                            Console.WriteLine("\n\tInvalid choice. Skipping credential change.");
+                            break;
+                    }
+
+                    loginAttempts = 0;
+                }
+            } while (true);
 
             //OPTIONS
             string[] options = { "[1] Create Profile", "[2] Edit Profile", "[3] View Profile", "[4] Delete Profile", "[5] Exit Program" };
@@ -205,7 +246,7 @@ namespace PMSofVolleyballPlayer
             ViewProfile(); // Calling the View Profile Method
 
             int index;
-            while (true) 
+            while (true)
             {
                 Console.Write("\nEnter the index number of the player to delete: ");
                 if (int.TryParse(Console.ReadLine(), out index) && index >= 0 && index < playerService.GetPlayerCount())
@@ -213,7 +254,7 @@ namespace PMSofVolleyballPlayer
                     if (playerService.DeletePlayer(index))
                     {
                         Console.WriteLine("\n\t---------------- Player's Profile DELETED successfully! ----------------");
-                        break; 
+                        break;
                     }
                     else
                     {
