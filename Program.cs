@@ -136,18 +136,13 @@ namespace PMSofVolleyballPlayer
         static string GetValidInput(string prompt)
         {
             string input;
-            while (true)
+            do
             {
                 Console.Write(prompt);
                 input = Console.ReadLine();
-
-                if (!string.IsNullOrWhiteSpace(input))
-                {
-                    return input;
-                }
-
+                if (!string.IsNullOrWhiteSpace(input)) return input;
                 Console.WriteLine("\n\t********** ERROR: Input cannot be null or empty. Please enter a valid value.**********");
-            }
+            } while (true);
         }
 
         //METHOD FOR CREATE PROFILE
@@ -162,9 +157,7 @@ namespace PMSofVolleyballPlayer
             {
                 Console.Write("Enter a player age: ");
                 if (int.TryParse(Console.ReadLine(), out age) && age > 0)
-                {
                     break;
-                }
                 Console.WriteLine("\n\t********** ERROR: Please enter a valid positive number for age. **********\n");
             }
 
@@ -192,10 +185,16 @@ namespace PMSofVolleyballPlayer
             {
                 Console.Write("\nEnter the index number of the player to edit: ");
                 if (int.TryParse(Console.ReadLine(), out index) && index >= 0 && index < playerService.GetPlayerCount())
-                {
+
                     break;
-                }
                 Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
+            }
+
+            var player = playerService.GetPlayerByIndex(index);
+            if (player == null)
+            {
+                Console.WriteLine("Player not found.");
+                return;
             }
 
             Console.WriteLine("\nWhat would you like to edit?");
@@ -203,7 +202,6 @@ namespace PMSofVolleyballPlayer
             Console.Write("Enter your choice: ");
             string editChoice = Console.ReadLine();
 
-            var player = playerService.GetPlayerByIndex(index);
             string newName = player.Name;
             int newAge = player.Age;
             string newPosition = player.Position;
@@ -309,21 +307,20 @@ namespace PMSofVolleyballPlayer
             {
                 Console.Write("\nEnter the index number of the player to delete: ");
                 if (int.TryParse(Console.ReadLine(), out index) && index >= 0 && index < playerService.GetPlayerCount())
-                {
-                    if (playerService.DeletePlayer(index))
-                    {
-                        Console.WriteLine("\n\t---------------- Player's Profile DELETED successfully! ----------------");
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("\n\t********** ERROR: Could not delete profile. Try again. **********");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
-                }
+                    break;
+                Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
+            }
+
+            if (playerService.DeletePlayer(index))
+            {
+                Console.WriteLine("\n\t---------------- Player's Profile DELETED successfully! ----------------");
+            }
+
+
+
+            else
+            {
+                Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
             }
 
         }

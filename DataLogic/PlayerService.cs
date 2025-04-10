@@ -1,63 +1,49 @@
 ﻿using VolleyballPMS;
 using System;
 using System.Collections.Generic;
+using PMSDataPlayer;
+using System.Numerics;
 
 namespace VolleyballPMS
 {
     public class PlayerService
     {
-        public class Player
-        {
-            public string Name;
-            public int Age;
-            public string Position;
 
-            public Player(string name, int age, string position)
-            {
-                this.Name = name;
-                this.Age = age;
-                this.Position = position;
-            }
-        }
-
-        private readonly List<Player> playersList = new();
+        private readonly PlayerData playerData = new();
 
         public bool AddPlayer(string name, int age, string position)
         {
-            playersList.Add(new Player(name, age, position));
+            Player newPlayer = new(name, age, position);
+            playerData.AddPlayer(newPlayer);
             return true;
         }
 
-        public bool EditPlayer(int index, string name, int age, string position)
+        public bool EditPlayer(int index, string newName, int newAge, string newPosition)
         {
-            if (index < 0 || index >= playersList.Count)
-                return false;
+            return playerData.UpdatePlayer(index, newName, newAge, newPosition);
 
-            playersList[index].Name = name;
-            playersList[index].Age = age;
-            playersList[index].Position = position;
-            return true;
         }
 
         public bool DeletePlayer(int index)
         {
-            if (index < 0 || index >= playersList.Count)
-                return false;
+            return playerData.DeletePlayer(index);
 
-            playersList.RemoveAt(index);
-            return true;
         }
 
         public List<Player> GetAllPlayers()
         {
-            return new List<Player>(playersList);
+            return playerData.GetAllPlayers();
         }
 
-        public int GetPlayerCount() => playersList.Count;
+        public int GetPlayerCount()
+        {
+            return playerData.GetPlayerCount();
+
+        }
 
         public Player GetPlayerByIndex(int index)
         {
-            return (index >= 0 && index < playersList.Count) ? playersList[index] : null;
+            return playerData.GetPlayerByIndex(index);
         }
     }
 }
