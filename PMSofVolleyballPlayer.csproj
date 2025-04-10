@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PMSDataPlayer\PMSDataPlayer.csproj" />
     <ProjectReference Include="DataLogic\VolleyballPMS.csproj" />
   </ItemGroup>
 
