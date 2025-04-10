@@ -51,25 +51,25 @@ namespace PMSofVolleyballPlayer
                         case "username":
                             Console.Write("Enter new username: ");
                             adminUsername = Console.ReadLine();
-                            Console.WriteLine("\n\t Username changed successfully.");
+                            Console.WriteLine("\n\t ---------------- Username changed successfully. ----------------");
                             break;
 
                         case "password":
                             Console.Write("Enter new password: ");
                             adminPassword = Console.ReadLine();
-                            Console.WriteLine("\n\t Password changed successfully.");
+                            Console.WriteLine("\n\t ---------------- Password changed successfully. ----------------");
                             break;
 
-                        case "both":
+                        case "both": 
                             Console.Write("Enter new username: ");
                             adminUsername = Console.ReadLine();
                             Console.Write("Enter new password: ");
                             adminPassword = Console.ReadLine();
-                            Console.WriteLine("\n\t Username and password changed successfully.");
+                            Console.WriteLine("\n\t ---------------- Username and password changed successfully. ----------------");
                             break;
 
                         default:
-                            Console.WriteLine("\n\tInvalid choice. Skipping credential change.");
+                            Console.WriteLine("\n\t *********** Invalid choice. Skipping credential change. ***********");
                             break;
                     }
 
@@ -196,10 +196,10 @@ namespace PMSofVolleyballPlayer
                 Console.WriteLine("Player not found.");
                 return;
             }
-
-            Console.WriteLine("\nWhat would you like to edit?");
+            Console.WriteLine("\n------------------------------------------------------");
+            Console.WriteLine("What would you like to edit?");
             Console.WriteLine("[1] Name\n[2] Age\n[3] Position\n[4] All");
-            Console.Write("Enter your choice: ");
+            Console.Write("\nEnter your choice:");
             string editChoice = Console.ReadLine();
 
             string newName = player.Name;
@@ -267,7 +267,7 @@ namespace PMSofVolleyballPlayer
         {
             Console.WriteLine("\nYou selected >>> SEARCH PROFILE <<< ");
 
-            string keyword = GetValidInput("Enter name to search: ").ToLower();
+            string keyword = GetValidInput("\nEnter name to search: ").ToLower();
             var players = playerService.GetAllPlayers();
 
             bool found = false;
