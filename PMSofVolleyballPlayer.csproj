@@ -10,14 +10,17 @@
   <ItemGroup>
     <Compile Remove="DataLogic\**" />
     <Compile Remove="PlayerData\**" />
+    <Compile Remove="PMSCommon\**" />
     <Compile Remove="PMSDataPlayer\**" />
     <Compile Remove="VballPMS\**" />
     <EmbeddedResource Remove="DataLogic\**" />
     <EmbeddedResource Remove="PlayerData\**" />
+    <EmbeddedResource Remove="PMSCommon\**" />
     <EmbeddedResource Remove="PMSDataPlayer\**" />
     <EmbeddedResource Remove="VballPMS\**" />
     <None Remove="DataLogic\**" />
     <None Remove="PlayerData\**" />
+    <None Remove="PMSCommon\**" />
     <None Remove="PMSDataPlayer\**" />
     <None Remove="VballPMS\**" />
   </ItemGroup>

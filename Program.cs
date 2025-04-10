@@ -199,7 +199,7 @@ namespace PMSofVolleyballPlayer
             Console.WriteLine("\n------------------------------------------------------");
             Console.WriteLine("What would you like to edit?");
             Console.WriteLine("[1] Name\n[2] Age\n[3] Position\n[4] All");
-            Console.Write("\nEnter your choice:");
+            Console.Write("\nEnter your choice: ");
             string editChoice = Console.ReadLine();
 
             string newName = player.Name;
