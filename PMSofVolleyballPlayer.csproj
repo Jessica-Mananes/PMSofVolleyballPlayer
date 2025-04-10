@@ -9,8 +9,17 @@
 
   <ItemGroup>
     <Compile Remove="DataLogic\**" />
+    <Compile Remove="PlayerData\**" />
+    <Compile Remove="PMSDataPlayer\**" />
+    <Compile Remove="VballPMS\**" />
     <EmbeddedResource Remove="DataLogic\**" />
+    <EmbeddedResource Remove="PlayerData\**" />
+    <EmbeddedResource Remove="PMSDataPlayer\**" />
+    <EmbeddedResource Remove="VballPMS\**" />
     <None Remove="DataLogic\**" />
+    <None Remove="PlayerData\**" />
+    <None Remove="PMSDataPlayer\**" />
+    <None Remove="VballPMS\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="DataLogic\VolleyballPMS.csproj" />
+    <ProjectReference Include="VballPMS\VballPMS.csproj" />
   </ItemGroup>
 
 </Project>

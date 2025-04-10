@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\PMSDataPlayer\PMSDataPlayer.csproj" />
+    <ProjectReference Include="..\PMSDataPlayer\PMSDataPlayer.csproj" />
   </ItemGroup>
 
 </Project>
