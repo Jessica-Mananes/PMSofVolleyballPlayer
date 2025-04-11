@@ -333,9 +333,6 @@ namespace PMSofVolleyballPlayer
             {
                 Console.WriteLine("\n\t---------------- Player's Profile DELETED successfully! ----------------");
             }
-
-
-
             else
             {
                 Console.WriteLine("\n\t********** ERROR: Invalid index. Please enter a valid player index. **********");
