@@ -17,12 +17,13 @@ namespace PMSofVolleyballPlayer
             string adminUsername = "batakmagvball";
             string adminPassword = "jess";
             string username, password;
+            string adminResetCode = "vball11";
 
             int loginAttempts = 0;
             const int maxAttempts = 3;
 
 
-            do //DO-WHILE LOOP FOR LOGGING IN
+            while (true) //LOG IN
             {
                 Console.Write("\nEnter username: ");
                 username = Console.ReadLine();
@@ -43,39 +44,50 @@ namespace PMSofVolleyballPlayer
                 if (loginAttempts >= maxAttempts)
                 {
                     Console.WriteLine("\nSorry... Too many login failed.\n");
-                    Console.Write("To reset your account: Would you like to change your [username], [password], or [both]?: ");
-                    string changeOption = Console.ReadLine()?.ToLower();
+                    Console.Write("If you're the admin, enter the reset code to change credentials: ");
+                    string resetCode = Console.ReadLine();
 
-                    switch (changeOption)
+                    if (resetCode == adminResetCode)
                     {
-                        case "username":
-                            Console.Write("Enter new username: ");
-                            adminUsername = Console.ReadLine();
-                            Console.WriteLine("\n\t ---------------- Username changed successfully. ----------------");
-                            break;
+                        Console.Write("\nTo reset your account: Would you like to change your [username], [password], or [both]?: ");
+                        string changeOption = Console.ReadLine()?.ToLower();
 
-                        case "password":
-                            Console.Write("Enter new password: ");
-                            adminPassword = Console.ReadLine();
-                            Console.WriteLine("\n\t ---------------- Password changed successfully. ----------------");
-                            break;
+                        switch (changeOption)
+                        {
+                            case "username":
+                                Console.Write("Enter new username: ");
+                                adminUsername = Console.ReadLine();
+                                Console.WriteLine("\n\t ---------------- Username changed successfully. ----------------");
+                                break;
 
-                        case "both": 
-                            Console.Write("Enter new username: ");
-                            adminUsername = Console.ReadLine();
-                            Console.Write("Enter new password: ");
-                            adminPassword = Console.ReadLine();
-                            Console.WriteLine("\n\t ---------------- Username and password changed successfully. ----------------");
-                            break;
+                            case "password":
+                                Console.Write("Enter new password: ");
+                                adminPassword = Console.ReadLine();
+                                Console.WriteLine("\n\t ---------------- Password changed successfully. ----------------");
+                                break;
 
-                        default:
-                            Console.WriteLine("\n\t *********** Invalid choice. Skipping credential change. ***********");
-                            break;
+                            case "both":
+                                Console.Write("Enter new username: ");
+                                adminUsername = Console.ReadLine();
+                                Console.Write("Enter new password: ");
+                                adminPassword = Console.ReadLine();
+                                Console.WriteLine("\n\t ---------------- Username and password changed successfully. ----------------");
+                                break;
+
+                            default:
+                                Console.WriteLine("\n\t *********** Invalid choice. Skipping credential change. ***********");
+                                break;
+                        }
+
+                        loginAttempts = 0;
                     }
-
-                    loginAttempts = 0;
+                    else
+                    {
+                        Console.WriteLine("\n\t[ACCESS DENIED]: Invalid reset code. Program will exit......");
+                        return;
+                    }
                 }
-            } while (true);
+            }
 
             //OPTIONS
             string[] options = { "[1] Create Profile", "[2] Edit Profile", "[3] View Profile", "[4] Delete Profile", "[5] Search Profile", "[6] Exit Program" };
@@ -266,6 +278,12 @@ namespace PMSofVolleyballPlayer
         static void SearchProfile()
         {
             Console.WriteLine("\nYou selected >>> SEARCH PROFILE <<< ");
+
+            if (playerService.GetPlayerCount() == 0)
+            {
+                Console.WriteLine("\n\t********** No profiles available. Create a profile first. **********");
+                return;
+            }
 
             string keyword = GetValidInput("\nEnter name to search: ").ToLower();
             var players = playerService.GetAllPlayers();
