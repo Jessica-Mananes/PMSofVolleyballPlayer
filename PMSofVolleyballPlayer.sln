@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSofVolleyballPlayer", "PMSofVolleyballPlayer.csproj", "{C867AE90-50B0-4060-BB15-00AE9CA547CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{796DFFD5-9F30-4EE7-A4CA-9235C167E78A} = {796DFFD5-9F30-4EE7-A4CA-9235C167E78A}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VballPMS", "VballPMS\VballPMS.csproj", "{92EF6600-9818-41B0-8CC9-10E1AC8C8468}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSDataPlayer", "PMSDataPlayer\PMSDataPlayer.csproj", "{8FE9BB0C-5228-492F-9721-628782626CC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerCommon", "PlayerCommon\PlayerCommon.csproj", "{796DFFD5-9F30-4EE7-A4CA-9235C167E78A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +37,10 @@ Global
 		{8FE9BB0C-5228-492F-9721-628782626CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FE9BB0C-5228-492F-9721-628782626CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FE9BB0C-5228-492F-9721-628782626CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{796DFFD5-9F30-4EE7-A4CA-9235C167E78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{796DFFD5-9F30-4EE7-A4CA-9235C167E78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{796DFFD5-9F30-4EE7-A4CA-9235C167E78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{796DFFD5-9F30-4EE7-A4CA-9235C167E78A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

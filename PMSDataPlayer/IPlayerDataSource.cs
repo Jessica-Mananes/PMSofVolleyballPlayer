@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using PlayerCommon;
 
 namespace PMSDataPlayer
 {
     public interface IPlayerDataSource
     {
+        List<Player> GetAllPlayers();
         bool AddPlayer(Player player);
         bool UpdatePlayer(Player player);
         bool DeletePlayer(string name);
         Player GetPlayerByName(string name);
-        List<Player> GetAllPlayers();
         List<Player> SearchPlayersByName(string searchTerm);
     }
 }
