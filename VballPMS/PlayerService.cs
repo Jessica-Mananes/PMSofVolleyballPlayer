@@ -9,7 +9,7 @@ namespace VolleyballPMS
     public class PlayerService
     {
 
-        private readonly PlayerData playerData = new();
+        private readonly InMemoryPlayerData playerData = new();
 
         public bool AddPlayer(string name, int age, string position)
         {

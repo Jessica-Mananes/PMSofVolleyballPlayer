@@ -308,7 +308,7 @@ namespace PMSofVolleyballPlayer
         }
 
 
-        //METHOD FOR DELETE PROFILE
+        //METHOD FOR DELETE PROFILE 
         static void DeleteProfile()
         {
             Console.WriteLine("\nYou selected >>> DELETE PROFILE <<< ");

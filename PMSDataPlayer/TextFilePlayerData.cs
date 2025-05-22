@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PMSDataPlayer
 {
-    class PlayerData
+    class TextFilePlayerData
     {
     }
 }
