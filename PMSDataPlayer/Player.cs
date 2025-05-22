@@ -12,6 +12,9 @@ namespace PMSDataPlayer
         public int Age { get; set; }
         public string Position { get; set; }
 
+        public Player() { }
+
+
         public Player(string name, int age, string position)
         {
             Name = name;

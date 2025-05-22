@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace PMSDataPlayer
 {
-    interface IPlayerDataSource
+    public interface IPlayerDataSource
     {
+        bool AddPlayer(Player player);
+        bool UpdatePlayer(Player player);
+        bool DeletePlayer(string name);
+        Player GetPlayerByName(string name);
+        List<Player> GetAllPlayers();
+        List<Player> SearchPlayersByName(string searchTerm);
     }
 }

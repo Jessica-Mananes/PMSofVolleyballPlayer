@@ -1,49 +1,45 @@
-﻿using VolleyballPMS;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using PMSDataPlayer;
-using System.Numerics;
 
 namespace VolleyballPMS
 {
     public class PlayerService
     {
+        private readonly IPlayerDataSource _data;
 
-        private readonly InMemoryPlayerData playerData = new();
+        public PlayerService(IPlayerDataSource data)
+        {
+            _data = data;
+        }
 
         public bool AddPlayer(string name, int age, string position)
         {
-            Player newPlayer = new(name, age, position);
-            playerData.AddPlayer(newPlayer);
-            return true;
+            return _data.AddPlayer(new Player { Name = name, Age = age, Position = position });
         }
 
-        public bool EditPlayer(int index, string newName, int newAge, string newPosition)
+        public bool UpdatePlayer(Player player)
         {
-            return playerData.UpdatePlayer(index, newName, newAge, newPosition);
-
+            return _data.UpdatePlayer(player);
         }
 
-        public bool DeletePlayer(int index)
+        public bool DeletePlayer(string name)
         {
-            return playerData.DeletePlayer(index);
+            return _data.DeletePlayer(name);
+        }
 
+        public Player GetPlayerByName(string name)
+        {
+            return _data.GetPlayerByName(name);
         }
 
         public List<Player> GetAllPlayers()
         {
-            return playerData.GetAllPlayers();
+            return _data.GetAllPlayers();
         }
 
-        public int GetPlayerCount()
+        public List<Player> SearchPlayersByName(string searchTerm)
         {
-            return playerData.GetPlayerCount();
-
-        }
-
-        public Player GetPlayerByIndex(int index)
-        {
-            return playerData.GetPlayerByIndex(index);
+            return _data.SearchPlayersByName(searchTerm);
         }
     }
 }

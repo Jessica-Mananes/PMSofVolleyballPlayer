@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="PMSDataPlayer\PMSDataPlayer.csproj" />
     <ProjectReference Include="VballPMS\VballPMS.csproj" />
   </ItemGroup>
 
