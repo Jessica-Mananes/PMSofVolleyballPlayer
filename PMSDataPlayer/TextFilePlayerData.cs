@@ -23,15 +23,17 @@ namespace PMSDataPlayer
             return true;
         }
 
-        public bool UpdatePlayer(Player updatedPlayer)
+        public bool UpdatePlayer(string originalName, Player updatedPlayer)
         {
             var players = GetAllPlayers();
-            var existingPlayer = players.FirstOrDefault(p => p.Name.Equals(updatedPlayer.Name, StringComparison.OrdinalIgnoreCase));
+            var existingPlayer = players.FirstOrDefault(p => p.Name.Equals(originalName, System.StringComparison.OrdinalIgnoreCase));
             if (existingPlayer == null)
                 return false;
 
+            existingPlayer.Name = updatedPlayer.Name;
             existingPlayer.Age = updatedPlayer.Age;
             existingPlayer.Position = updatedPlayer.Position;
+
             SaveAll(players);
             return true;
         }

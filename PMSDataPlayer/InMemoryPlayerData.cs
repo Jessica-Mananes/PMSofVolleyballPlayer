@@ -12,19 +12,18 @@ namespace PMSDataPlayer
         public bool AddPlayer(Player player)
         {
             if (players.Any(p => p.Name == player.Name))
-                return false; 
+                return false;
             players.Add(player);
             return true;
         }
 
-        public bool UpdatePlayer(Player player)
+        public bool UpdatePlayer(string originalName, Player updatedPlayer)
         {
-            var existing = players.FirstOrDefault(p => p.Name == player.Name);
-            if (existing == null)
+            var index = players.FindIndex(p => p.Name.Equals(originalName, StringComparison.OrdinalIgnoreCase));
+            if (index == -1)
                 return false;
 
-            existing.Age = player.Age;
-            existing.Position = player.Position;
+            players[index] = updatedPlayer;
             return true;
         }
 

@@ -218,11 +218,12 @@ public class Program
             return;
         }
 
-        Console.WriteLine("\nSelect field to edit:");
         Console.WriteLine("[1] Name");
         Console.WriteLine("[2] Age");
         Console.WriteLine("[3] Position");
         Console.WriteLine("[4] All fields");
+        Console.Write("\nSelect field to edit:");
+
 
         int choice;
         while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 4)
@@ -271,7 +272,7 @@ public class Program
                 break;
         }
 
-        if (playerService.UpdatePlayer(player))
+        if (playerService.UpdatePlayer(name, player))
             Console.WriteLine("\n\t---------------- Player's Profile UPDATED successfully! ----------------");
         else
             Console.WriteLine("\n\t[ERROR] Failed to update player profile.");

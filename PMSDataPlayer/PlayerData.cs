@@ -30,11 +30,9 @@ namespace PMSDataPlayer
             if (existingPlayer == null)
                 return false;
 
-            existingPlayer.Age = updatedPlayer.Age;
-            existingPlayer.Position = updatedPlayer.Position;
-
-            return playerData.UpdatePlayer(existingPlayer);
+            return playerData.UpdatePlayer(existingPlayer.Name, updatedPlayer);
         }
+
 
         public bool DeletePlayer(string playerName)
         {

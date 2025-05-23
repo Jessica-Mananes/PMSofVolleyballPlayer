@@ -2,7 +2,6 @@
 using PMSDataPlayer;
 using PlayerCommon;
 
-
 namespace VolleyballPMS
 {
     public class PlayerService
@@ -19,9 +18,9 @@ namespace VolleyballPMS
             return _data.AddPlayer(new Player { Name = name, Age = age, Position = position });
         }
 
-        public bool UpdatePlayer(Player player)
+        public bool UpdatePlayer(string originalName, Player updatedPlayer)
         {
-            return _data.UpdatePlayer(player);
+            return _data.UpdatePlayer(originalName, updatedPlayer);
         }
 
         public bool DeletePlayer(string name)
