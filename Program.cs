@@ -227,8 +227,9 @@ public class Program
             string position = (p.Position ?? "N/A").Trim();
             string age = p.Age.ToString();
 
-            Console.WriteLine("| {0,-20} | {1,-5} | {2,-12} |", name, age, position);
+            Console.WriteLine($"| Name: {name,-15} | Age: {age,-3} | Position: {position,-10} |");
         }
+
     }
     static void DeleteProfile()
     {
