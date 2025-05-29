@@ -5,11 +5,11 @@ namespace PMSDataPlayer
 {
     public interface IPlayerDataSource
     {
-        List<Player> GetAllPlayers();
         bool AddPlayer(Player player);
-        bool UpdatePlayer(string originalName, Player updatedPlayer);
         bool DeletePlayer(string name);
+        List<Player> GetAllPlayers();
         Player GetPlayerByName(string name);
         List<Player> SearchPlayersByName(string searchTerm);
+        bool UpdatePlayer(string originalName, Player updatedPlayer);
     }
 }

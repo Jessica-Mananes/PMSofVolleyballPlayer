@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using PMSDataPlayer;
 using PlayerCommon;
+using PMSDataPlayer;
 
 namespace VolleyballPMS
 {
@@ -13,13 +13,15 @@ namespace VolleyballPMS
             _data = data;
         }
 
-        public bool AddPlayer(string name, int age, string position)
+        public bool AddPlayer(Player player)
         {
-            return _data.AddPlayer(new Player { Name = name, Age = age, Position = position });
+            return _data.AddPlayer(player);
         }
 
         public bool UpdatePlayer(string originalName, Player updatedPlayer)
         {
+            var existingPlayer = _data.GetPlayerByName(originalName);
+            if (existingPlayer == null) return false;
             return _data.UpdatePlayer(originalName, updatedPlayer);
         }
 
