@@ -149,7 +149,7 @@ public class Program
         int age = GetValidatedPositiveNumber("Enter player age: ");
         string position = GetValidInput("Enter player position (e.g. Spiker, Libero, Setter): ");
 
-        var player = new Player { Name = name, Age = age, Position = position };
+        var player = new Player { Name = name.Trim(), Age = age, Position = position.Trim() };
 
         if (playerService.AddPlayer(player))
             Console.WriteLine("\n\t---------------- Player's Profile ADDED successfully! ----------------");
@@ -179,9 +179,9 @@ public class Program
 
         var updatedPlayer = new Player
         {
-            Name = player.Name,
+            Name = player.Name.Trim(),
             Age = player.Age,
-            Position = player.Position
+            Position = player.Position.Trim()
         };
 
         switch (choice)
@@ -222,9 +222,14 @@ public class Program
 
         Console.WriteLine("\n-- Players List --");
         foreach (var p in players)
-            Console.WriteLine($"Name: {p.Name} | Age: {p.Age} | Position: {p.Position}");
-    }
+        {
+            string name = (p.Name ?? "N/A").Trim();
+            string position = (p.Position ?? "N/A").Trim();
+            string age = p.Age.ToString();
 
+            Console.WriteLine("| {0,-20} | {1,-5} | {2,-12} |", name, age, position);
+        }
+    }
     static void DeleteProfile()
     {
         Console.WriteLine("\nYou selected >>> DELETE PROFILE <<<");
