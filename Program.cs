@@ -250,6 +250,13 @@ public class Program
         string term = GetValidInput("Enter name or part of name to search: ");
         var results = playerService.SearchPlayersByName(term);
 
+        if (results.Count == 0)
+        {
+            Console.WriteLine($"\nNo player found matching \"{term}\".");
+            return;
+        }
+
+
         Console.WriteLine("\n-- Search Results --");
         foreach (var p in results)
             Console.WriteLine($"Name: {p.Name} | Age: {p.Age} | Position: {p.Position}");
