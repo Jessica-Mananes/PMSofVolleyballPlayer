@@ -222,7 +222,11 @@ public class Program
 
         Console.WriteLine("\n-- Players List --");
         foreach (var p in players)
-            Console.WriteLine($"Name: {p.Name} | Age: {p.Age} | Position: {p.Position}");
+        {
+            var cleanPosition = p.Position?.Replace("\r", "").Replace("\n", "").Trim();
+
+            Console.WriteLine($"Name: {p.Name}  | Age: {p.Age} | Position: {cleanPosition}");
+        }
     }
 
     static void DeleteProfile()

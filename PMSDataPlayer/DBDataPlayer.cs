@@ -50,27 +50,28 @@ namespace PMSDataPlayer
         {
             var players = new List<Player>();
             var selectStatement = "SELECT * FROM Players";
-            SqlCommand command = new SqlCommand(selectStatement, sqlConnection);
 
-            sqlConnection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
+            using (var sqlConnection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand(selectStatement, sqlConnection))
             {
-                Player player = new Player
+                sqlConnection.Open();
+                using (var reader = command.ExecuteReader())
                 {
-                    Name = reader["Name"].ToString(),
-                    Age = Convert.ToInt32(reader["Age"]),
-                    Position = reader["Position"].ToString()
-                };
-
-                players.Add(player);
+                    while (reader.Read())
+                    {
+                        var player = new Player
+                        {
+                            Name = reader["Name"] != DBNull.Value ? reader["Name"].ToString() : "Unknown",
+                            Age = reader["Age"] != DBNull.Value ? Convert.ToInt32(reader["Age"]) : 0,
+                            Position = reader["Position"] != DBNull.Value ? reader["Position"].ToString() : "Unknown"
+                        };
+                        players.Add(player);
+                    }
+                }
             }
 
-            sqlConnection.Close();
             return players;
         }
-
         public Player GetPlayerByName(string name)
         {
             var selectStatement = "SELECT * FROM Players WHERE Name = @Name";
