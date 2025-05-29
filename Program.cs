@@ -227,7 +227,7 @@ public class Program
             string position = (p.Position ?? "N/A").Trim();
             string age = p.Age.ToString();
 
-            Console.WriteLine($"| Name: {name,-15} | Age: {age,-3} | Position: {position,-10} |");
+            Console.WriteLine($"| Name: {name,-15} | Age: {age,-3} | Position: {position,-10} ");
         }
 
     }
