@@ -161,7 +161,7 @@ public class Program
     {
         Console.WriteLine("\nYou selected >>> EDIT PROFILE <<<");
 
-        string name = GetValidInput("Enter name of player to edit: ");
+        string originalName = GetValidInput("Enter name of player to edit: ");
         var player = playerService.GetPlayerByName(originalName);
 
         if (player == null)
@@ -187,18 +187,18 @@ public class Program
         switch (choice)
         {
             case 1:
-                player.Name = GetValidInput("Enter new name: ");
+                updatedPlayer.Name = GetValidInput("Enter new name: ");
                 break;
             case 2:
-                player.Age = GetValidatedPositiveNumber("Enter new age: ");
+                updatedPlayer.Age = GetValidatedPositiveNumber("Enter new age: ");
                 break;
             case 3:
-                player.Position = GetValidInput("Enter new position: ");
+                updatedPlayer.Position = GetValidInput("Enter new position: ");
                 break;
             case 4:
-                player.Name = GetValidInput("Enter new name: ");
-                player.Age = GetValidatedPositiveNumber("Enter new age: ");
-                player.Position = GetValidInput("Enter new position: ");
+                updatedPlayer.Name = GetValidInput("Enter new name: ");
+                updatedPlayer.Age = GetValidatedPositiveNumber("Enter new age: ");
+                updatedPlayer.Position = GetValidInput("Enter new position: ");
                 break;
         }
 
