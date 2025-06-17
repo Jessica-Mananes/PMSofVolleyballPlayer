@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using VolleyballPMS;
 using PMSDataPlayer;
 using PlayerCommon;
@@ -12,7 +11,8 @@ public class Program
     {
         Console.WriteLine("\n\n\t---------------- Volleyball Players Profile Management System ----------------");
 
-        ChooseStorageType();
+        playerService = new PlayerService(new PlayerData());
+        Console.WriteLine($"\n[INFO]: Using storage type: {playerService.GetStorageType()}");
 
         if (!AdminLogin())
         {
@@ -21,37 +21,6 @@ public class Program
         }
 
         MainMenu();
-    }
-
-    static void ChooseStorageType()
-    {
-        Console.WriteLine("[1] In-Memory");
-        Console.WriteLine("[2] JSON File");
-        Console.WriteLine("[3] Text File");
-        Console.WriteLine("[4] Database");
-        Console.Write("Choose data storage type: ");
-
-        int storageChoice = GetValidatedNumberInput(1, 4);
-
-        playerService = storageChoice switch
-        {
-            1 => new PlayerService(new InMemoryPlayerData()),
-            2 => new PlayerService(new JsonFilePlayerData()),
-            3 => new PlayerService(new TextFilePlayerData()),
-            4 => new PlayerService(new DBDataPlayer()),
-            _ => throw new Exception("Invalid storage type.")
-        };
-
-        string storageName = storageChoice switch
-        {
-            1 => "In-Memory",
-            2 => "JSON File",
-            3 => "Text File",
-            4 => "Database",
-            _ => "Unknown"
-        };
-
-        Console.WriteLine($"\nStorage type selected: {storageName}");
     }
 
     static bool AdminLogin()
@@ -101,6 +70,7 @@ public class Program
             }
         }
     }
+
     static void MainMenu()
     {
         string[] options = {
@@ -229,8 +199,8 @@ public class Program
 
             Console.WriteLine($"| Name: {name,-15} | Age: {age,-3} | Position: {position,-10} ");
         }
-
     }
+
     static void DeleteProfile()
     {
         Console.WriteLine("\nYou selected >>> DELETE PROFILE <<<");
@@ -262,12 +232,10 @@ public class Program
             return;
         }
 
-
         Console.WriteLine("\n-- Search Results --");
         foreach (var p in results)
             Console.WriteLine($"Name: {p.Name} | Age: {p.Age} | Position: {p.Position}");
     }
-
 
     static string GetValidInput(string prompt)
     {

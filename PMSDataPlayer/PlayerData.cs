@@ -3,50 +3,25 @@ using PlayerCommon;
 
 namespace PMSDataPlayer
 {
-    public class PlayerData
+    public class PlayerData : IPlayerDataSource
     {
-        private readonly IPlayerDataSource playerData;
+        private readonly IPlayerDataSource _dataSource;
 
         public PlayerData()
         {
-            playerData = new JsonFilePlayerData();
-          //  playerData = new TextFilePlayerData();
-          //  playerData = new InMemoryPlayerData();
+            //_dataSource = new InMemoryPlayerData();
+            //_dataSource = new JsonFilePlayerData();
+            _dataSource = new TextFilePlayerData();
+            //_dataSource = new DBDataPlayer(); 
         }
 
-        public List<Player> GetAllPlayers()
-        {
-            return playerData.GetAllPlayers();
-        }
+        public bool AddPlayer(Player player) => _dataSource.AddPlayer(player);
+        public List<Player> GetAllPlayers() => _dataSource.GetAllPlayers();
+        public Player GetPlayerByName(string name) => _dataSource.GetPlayerByName(name);
+        public bool UpdatePlayer(string name, Player updatedPlayer) => _dataSource.UpdatePlayer(name, updatedPlayer);
+        public bool DeletePlayer(string name) => _dataSource.DeletePlayer(name);
+        public List<Player> SearchPlayersByName(string name) => _dataSource.SearchPlayersByName(name);
 
-        public bool AddPlayer(Player player)
-        {
-            return playerData.AddPlayer(player);
-        }
-
-        public bool EditPlayer(Player updatedPlayer)
-        {
-            var existingPlayer = playerData.GetPlayerByName(updatedPlayer.Name);
-            if (existingPlayer == null)
-                return false;
-
-            return playerData.UpdatePlayer(existingPlayer.Name, updatedPlayer);
-        }
-
-
-        public bool DeletePlayer(string playerName)
-        {
-            return playerData.DeletePlayer(playerName);
-        }
-
-        public Player GetPlayerByName(string playerName)
-        {
-            return playerData.GetPlayerByName(playerName);
-        }
-
-        public List<Player> SearchPlayersByName(string searchTerm)
-        {
-            return playerData.SearchPlayersByName(searchTerm);
+      
         }
     }
-}

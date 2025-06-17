@@ -44,5 +44,9 @@ namespace VolleyballPMS
         {
             return _data.SearchPlayersByName(searchTerm);
         }
+        public string GetStorageType()
+        {
+            return _data.GetType().Name;
+        }
     }
 }
