@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSDataPlayer", "PMSDataPla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerCommon", "PlayerCommon\PlayerCommon.csproj", "{796DFFD5-9F30-4EE7-A4CA-9235C167E78A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VballAPI", "..\VballAPI\VballAPI.csproj", "{2763B329-3872-4E47-AA9B-11D89F1E30BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VballAPI", "..\VballAPI\VballAPI.csproj", "{63FCCC4D-EBEF-4146-89F0-92B5618B892D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +43,10 @@ Global
 		{796DFFD5-9F30-4EE7-A4CA-9235C167E78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{796DFFD5-9F30-4EE7-A4CA-9235C167E78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{796DFFD5-9F30-4EE7-A4CA-9235C167E78A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2763B329-3872-4E47-AA9B-11D89F1E30BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2763B329-3872-4E47-AA9B-11D89F1E30BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2763B329-3872-4E47-AA9B-11D89F1E30BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2763B329-3872-4E47-AA9B-11D89F1E30BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63FCCC4D-EBEF-4146-89F0-92B5618B892D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63FCCC4D-EBEF-4146-89F0-92B5618B892D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63FCCC4D-EBEF-4146-89F0-92B5618B892D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63FCCC4D-EBEF-4146-89F0-92B5618B892D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
