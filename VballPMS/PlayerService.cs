@@ -2,7 +2,7 @@
 using PlayerCommon;
 using PMSDataPlayer;
 
-namespace VolleyballPMS
+namespace VballPMS
 {
     public class PlayerService
     {
