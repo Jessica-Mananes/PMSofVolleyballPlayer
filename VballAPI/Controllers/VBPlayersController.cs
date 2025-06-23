@@ -10,7 +10,11 @@ namespace VballAPI.Controllers
     [ApiController]
     public class VBPlayersController : ControllerBase
     {
-        PlayerService playerService = new PlayerService(new InMemoryPlayerData());
+        private static readonly InMemoryPlayerData dataSource = new InMemoryPlayerData();
+
+
+        private static readonly PlayerService playerService = new PlayerService(dataSource);
+
 
         [HttpGet]
         public IEnumerable<Player> GetAllPlayers()
@@ -19,13 +23,13 @@ namespace VballAPI.Controllers
         }
 
         [HttpPost]
-        public bool AddPlayer(Player request)
+        public bool AddPlayer([FromBody] Player player)
         {
-            return playerService.AddPlayer(request);
+            return playerService.AddPlayer(player);
         }
 
         [HttpPatch("update")]
-        public bool UpdatePlayer(string name, Player updatedPlayer)
+        public bool UpdatePlayer(string name, [FromBody] Player updatedPlayer)
         {
             return playerService.UpdatePlayer(name, updatedPlayer);
         }
