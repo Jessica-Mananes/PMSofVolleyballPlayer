@@ -1,9 +1,9 @@
 ﻿using System;
-using VolleyballPMS;
+using VballPMS;
 using PMSDataPlayer;
 using PlayerCommon;
 
-public class Program
+public class PlayerUI
 {
     static PlayerService playerService;
 

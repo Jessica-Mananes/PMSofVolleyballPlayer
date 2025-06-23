@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -13,18 +13,21 @@
     <Compile Remove="PlayerData\**" />
     <Compile Remove="PMSCommon\**" />
     <Compile Remove="PMSDataPlayer\**" />
+    <Compile Remove="VballAPI\**" />
     <Compile Remove="VballPMS\**" />
     <EmbeddedResource Remove="DataLogic\**" />
     <EmbeddedResource Remove="PlayerCommon\**" />
     <EmbeddedResource Remove="PlayerData\**" />
     <EmbeddedResource Remove="PMSCommon\**" />
     <EmbeddedResource Remove="PMSDataPlayer\**" />
+    <EmbeddedResource Remove="VballAPI\**" />
     <EmbeddedResource Remove="VballPMS\**" />
     <None Remove="DataLogic\**" />
     <None Remove="PlayerCommon\**" />
     <None Remove="PlayerData\**" />
     <None Remove="PMSCommon\**" />
     <None Remove="PMSDataPlayer\**" />
+    <None Remove="VballAPI\**" />
     <None Remove="VballPMS\**" />
   </ItemGroup>
 

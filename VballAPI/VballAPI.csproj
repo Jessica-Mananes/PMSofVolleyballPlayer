@@ -10,10 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\PMSofVolleyballPlayer\PlayerCommon\PlayerCommon.csproj" />
-    <ProjectReference Include="..\PMSofVolleyballPlayer\PMSDataPlayer\PMSDataPlayer.csproj" />
-    <ProjectReference Include="..\PMSofVolleyballPlayer\VballPMS\VballPMS.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\PlayerCommon\PlayerCommon.csproj" />
+		<ProjectReference Include="..\PMSDataPlayer\PMSDataPlayer.csproj" />
+		<ProjectReference Include="..\VballPMS\VballPMS.csproj" />
+	</ItemGroup>
 
 </Project>
