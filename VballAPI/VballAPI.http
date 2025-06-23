@@ -1,0 +1,6 @@
+@VballAPI_HostAddress = http://localhost:5258
+
+GET {{VballAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
