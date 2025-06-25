@@ -38,8 +38,9 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSearch.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(253, 600);
+            this.btnSearch.Font = new System.Drawing.Font("Impact", 18F);
+            this.btnSearch.ForeColor = System.Drawing.Color.Navy;
+            this.btnSearch.Location = new System.Drawing.Point(201, 617);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(303, 55);
@@ -50,8 +51,9 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelete.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(253, 470);
+            this.btnDelete.Font = new System.Drawing.Font("Impact", 18F);
+            this.btnDelete.ForeColor = System.Drawing.Color.Navy;
+            this.btnDelete.Location = new System.Drawing.Point(201, 471);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(303, 59);
@@ -62,8 +64,9 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEdit.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(253, 215);
+            this.btnEdit.Font = new System.Drawing.Font("Impact", 18F);
+            this.btnEdit.ForeColor = System.Drawing.Color.Navy;
+            this.btnEdit.Location = new System.Drawing.Point(201, 218);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(303, 61);
@@ -74,8 +77,9 @@
             // btnView
             // 
             this.btnView.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnView.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.Location = new System.Drawing.Point(253, 339);
+            this.btnView.Font = new System.Drawing.Font("Impact", 18F);
+            this.btnView.ForeColor = System.Drawing.Color.Navy;
+            this.btnView.Location = new System.Drawing.Point(201, 339);
             this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(303, 60);
@@ -86,9 +90,9 @@
             // btnCreate
             // 
             this.btnCreate.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCreate.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCreate.Location = new System.Drawing.Point(253, 90);
+            this.btnCreate.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.Navy;
+            this.btnCreate.Location = new System.Drawing.Point(201, 97);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(303, 58);
@@ -100,7 +104,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 744);
+            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
+            this.ClientSize = new System.Drawing.Size(696, 839);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
