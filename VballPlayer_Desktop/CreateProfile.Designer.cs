@@ -131,9 +131,9 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(291, 476);
+            this.btnAdd.Location = new System.Drawing.Point(407, 471);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(201, 53);
+            this.btnAdd.Size = new System.Drawing.Size(171, 60);
             this.btnAdd.TabIndex = 22;
             this.btnAdd.Text = "Add Player";
             this.btnAdd.UseVisualStyleBackColor = false;
