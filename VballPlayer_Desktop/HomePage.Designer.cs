@@ -39,7 +39,7 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnSearch.Font = new System.Drawing.Font("Impact", 18F);
-            this.btnSearch.ForeColor = System.Drawing.Color.Navy;
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
             this.btnSearch.Location = new System.Drawing.Point(201, 617);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
@@ -52,7 +52,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnDelete.Font = new System.Drawing.Font("Impact", 18F);
-            this.btnDelete.ForeColor = System.Drawing.Color.Navy;
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Location = new System.Drawing.Point(201, 471);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
@@ -65,7 +65,7 @@
             // 
             this.btnEdit.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnEdit.Font = new System.Drawing.Font("Impact", 18F);
-            this.btnEdit.ForeColor = System.Drawing.Color.Navy;
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.Location = new System.Drawing.Point(201, 218);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
@@ -78,7 +78,7 @@
             // 
             this.btnView.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnView.Font = new System.Drawing.Font("Impact", 18F);
-            this.btnView.ForeColor = System.Drawing.Color.Navy;
+            this.btnView.ForeColor = System.Drawing.Color.Black;
             this.btnView.Location = new System.Drawing.Point(201, 339);
             this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Name = "btnView";
@@ -91,7 +91,7 @@
             // 
             this.btnCreate.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnCreate.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.Navy;
+            this.btnCreate.ForeColor = System.Drawing.Color.Black;
             this.btnCreate.Location = new System.Drawing.Point(201, 97);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
