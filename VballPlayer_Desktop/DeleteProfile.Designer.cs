@@ -40,8 +40,8 @@
             // 
             this.btnRefresh.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.btnRefresh.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnRefresh.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(383, 539);
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(362, 539);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(143, 45);
             this.btnRefresh.TabIndex = 38;
@@ -52,8 +52,8 @@
             // 
             this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.btnDelete.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelete.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(567, 539);
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(517, 539);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(143, 45);
             this.btnDelete.TabIndex = 37;
@@ -64,8 +64,8 @@
             // 
             this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.btnBack.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBack.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(59, 668);
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(42, 670);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(147, 45);
             this.btnBack.TabIndex = 36;
@@ -75,7 +75,7 @@
             // DataGridView1
             // 
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Location = new System.Drawing.Point(73, 170);
+            this.DataGridView1.Location = new System.Drawing.Point(26, 168);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.RowHeadersWidth = 51;
             this.DataGridView1.Size = new System.Drawing.Size(658, 332);
@@ -84,10 +84,12 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(314, 75);
+            this.Label3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Label3.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.ForeColor = System.Drawing.Color.Navy;
+            this.Label3.Location = new System.Drawing.Point(227, 76);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(191, 37);
+            this.Label3.Size = new System.Drawing.Size(256, 48);
             this.Label3.TabIndex = 34;
             this.Label3.Text = "DELETE PROFILE";
             // 
@@ -95,7 +97,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 788);
+            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
+            this.ClientSize = new System.Drawing.Size(696, 839);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnBack);
