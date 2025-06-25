@@ -13,7 +13,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\PlayerCommon\PlayerCommon.csproj" />
 		<ProjectReference Include="..\PMSDataPlayer\PMSDataPlayer.csproj" />
-		<ProjectReference Include="..\VballPMS\VballPMS.csproj" />
+		<ProjectReference Include="..\Vball_BusinessDataLogic\Vball_BusinessDataLogic.csproj" />
 	</ItemGroup>
 
 </Project>

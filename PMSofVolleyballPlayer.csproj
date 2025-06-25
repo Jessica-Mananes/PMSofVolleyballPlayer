@@ -15,6 +15,9 @@
     <Compile Remove="PMSDataPlayer\**" />
     <Compile Remove="VballAPI\**" />
     <Compile Remove="VballPMS\**" />
+    <Compile Remove="Vball_API\**" />
+    <Compile Remove="Vball_BusinessDataLogic\**" />
+    <Compile Remove="Vball_Desktop\**" />
     <EmbeddedResource Remove="DataLogic\**" />
     <EmbeddedResource Remove="PlayerCommon\**" />
     <EmbeddedResource Remove="PlayerData\**" />
@@ -22,6 +25,9 @@
     <EmbeddedResource Remove="PMSDataPlayer\**" />
     <EmbeddedResource Remove="VballAPI\**" />
     <EmbeddedResource Remove="VballPMS\**" />
+    <EmbeddedResource Remove="Vball_API\**" />
+    <EmbeddedResource Remove="Vball_BusinessDataLogic\**" />
+    <EmbeddedResource Remove="Vball_Desktop\**" />
     <None Remove="DataLogic\**" />
     <None Remove="PlayerCommon\**" />
     <None Remove="PlayerData\**" />
@@ -29,6 +35,9 @@
     <None Remove="PMSDataPlayer\**" />
     <None Remove="VballAPI\**" />
     <None Remove="VballPMS\**" />
+    <None Remove="Vball_API\**" />
+    <None Remove="Vball_BusinessDataLogic\**" />
+    <None Remove="Vball_Desktop\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,8 +45,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="PlayerCommon\PlayerCommon.csproj" />
     <ProjectReference Include="PMSDataPlayer\PMSDataPlayer.csproj" />
-    <ProjectReference Include="VballPMS\VballPMS.csproj" />
+    <ProjectReference Include="Vball_BusinessDataLogic\Vball_BusinessDataLogic.csproj" />
   </ItemGroup>
 
 </Project>
