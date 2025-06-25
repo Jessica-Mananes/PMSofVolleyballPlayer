@@ -39,7 +39,7 @@
             // 
             this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.btnBack.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBack.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(63, 675);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(147, 45);
@@ -51,11 +51,11 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Label3.Font = new System.Drawing.Font("Impact", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.ForeColor = System.Drawing.Color.Navy;
-            this.Label3.Location = new System.Drawing.Point(253, 63);
+            this.Label3.Location = new System.Drawing.Point(247, 68);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(215, 45);
+            this.Label3.Size = new System.Drawing.Size(232, 48);
             this.Label3.TabIndex = 34;
             this.Label3.Text = "VIEW PROFILE";
             // 
@@ -88,6 +88,7 @@
             this.Controls.Add(this.Label1);
             this.Name = "ViewProfile";
             this.Text = "ViewProfile";
+            this.Load += new System.EventHandler(this.ViewProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

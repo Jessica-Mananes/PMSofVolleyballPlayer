@@ -39,10 +39,10 @@
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(453, 651);
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(302, 651);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(175, 38);
+            this.btnRefresh.Size = new System.Drawing.Size(175, 52);
             this.btnRefresh.TabIndex = 9;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -50,10 +50,10 @@
             // btnPrevious
             // 
             this.btnPrevious.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevious.Location = new System.Drawing.Point(108, 651);
+            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.Location = new System.Drawing.Point(109, 651);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(175, 38);
+            this.btnPrevious.Size = new System.Drawing.Size(175, 49);
             this.btnPrevious.TabIndex = 8;
             this.btnPrevious.Text = "Previous";
             this.btnPrevious.UseVisualStyleBackColor = false;
@@ -61,7 +61,7 @@
             // dgvSearch
             // 
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(58, 208);
+            this.dgvSearch.Location = new System.Drawing.Point(37, 208);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.RowHeadersWidth = 51;
             this.dgvSearch.Size = new System.Drawing.Size(644, 353);
@@ -78,10 +78,10 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(527, 95);
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(522, 91);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(175, 38);
+            this.btnSearch.Size = new System.Drawing.Size(148, 47);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -90,7 +90,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 781);
+            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
+            this.ClientSize = new System.Drawing.Size(725, 839);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.dgvSearch);

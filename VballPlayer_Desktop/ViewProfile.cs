@@ -16,5 +16,10 @@ namespace VballPlayer_Desktop
         {
             InitializeComponent();
         }
+
+        private void ViewProfile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
