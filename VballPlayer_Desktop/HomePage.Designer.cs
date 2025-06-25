@@ -38,9 +38,9 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSearch.Font = new System.Drawing.Font("Impact", 18F);
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(201, 617);
+            this.btnSearch.Location = new System.Drawing.Point(201, 590);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(303, 55);
@@ -51,9 +51,9 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelete.Font = new System.Drawing.Font("Impact", 18F);
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(201, 471);
+            this.btnDelete.Location = new System.Drawing.Point(201, 462);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(303, 59);
@@ -64,7 +64,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEdit.Font = new System.Drawing.Font("Impact", 18F);
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.Location = new System.Drawing.Point(201, 218);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
@@ -77,7 +77,7 @@
             // btnView
             // 
             this.btnView.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnView.Font = new System.Drawing.Font("Impact", 18F);
+            this.btnView.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.Black;
             this.btnView.Location = new System.Drawing.Point(201, 339);
             this.btnView.Margin = new System.Windows.Forms.Padding(4);
@@ -90,7 +90,7 @@
             // btnCreate
             // 
             this.btnCreate.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCreate.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
             this.btnCreate.Location = new System.Drawing.Point(201, 97);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);

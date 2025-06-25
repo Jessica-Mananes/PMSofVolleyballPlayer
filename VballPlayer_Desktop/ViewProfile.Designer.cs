@@ -50,10 +50,12 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(313, 75);
+            this.Label3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Label3.Font = new System.Drawing.Font("Impact", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.ForeColor = System.Drawing.Color.Navy;
+            this.Label3.Location = new System.Drawing.Point(253, 63);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(172, 37);
+            this.Label3.Size = new System.Drawing.Size(215, 45);
             this.Label3.TabIndex = 34;
             this.Label3.Text = "VIEW PROFILE";
             // 
@@ -63,7 +65,7 @@
             this.DataGridView1.Location = new System.Drawing.Point(50, 179);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.RowHeadersWidth = 51;
-            this.DataGridView1.Size = new System.Drawing.Size(705, 407);
+            this.DataGridView1.Size = new System.Drawing.Size(614, 361);
             this.DataGridView1.TabIndex = 33;
             // 
             // Label1
@@ -78,7 +80,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 764);
+            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
+            this.ClientSize = new System.Drawing.Size(696, 839);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.DataGridView1);
