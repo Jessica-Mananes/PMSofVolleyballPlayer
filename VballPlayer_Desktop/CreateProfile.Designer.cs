@@ -43,18 +43,18 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Label3.Font = new System.Drawing.Font("Impact", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.ForeColor = System.Drawing.Color.Navy;
-            this.Label3.Location = new System.Drawing.Point(230, 62);
+            this.Label3.Location = new System.Drawing.Point(203, 93);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(245, 45);
+            this.Label3.Size = new System.Drawing.Size(289, 54);
             this.Label3.TabIndex = 21;
             this.Label3.Text = "CREATE PROFILE";
             // 
             // txbAge
             // 
             this.txbAge.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbAge.Location = new System.Drawing.Point(263, 240);
+            this.txbAge.Location = new System.Drawing.Point(263, 312);
             this.txbAge.Name = "txbAge";
             this.txbAge.Size = new System.Drawing.Size(402, 31);
             this.txbAge.TabIndex = 20;
@@ -62,7 +62,7 @@
             // txbName
             // 
             this.txbName.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbName.Location = new System.Drawing.Point(263, 183);
+            this.txbName.Location = new System.Drawing.Point(261, 253);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(400, 31);
             this.txbName.TabIndex = 19;
@@ -79,7 +79,7 @@
             "Opposite Spiker",
             "Opposite Hitter",
             "Middle Hitter"});
-            this.cmbPosition.Location = new System.Drawing.Point(263, 308);
+            this.cmbPosition.Location = new System.Drawing.Point(261, 370);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(402, 32);
             this.cmbPosition.TabIndex = 18;
@@ -88,7 +88,7 @@
             // 
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.Location = new System.Drawing.Point(133, 308);
+            this.lblPosition.Location = new System.Drawing.Point(124, 370);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(114, 35);
             this.lblPosition.TabIndex = 17;
@@ -98,7 +98,7 @@
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(106, 240);
+            this.lblAge.Location = new System.Drawing.Point(97, 308);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(141, 35);
             this.lblAge.TabIndex = 16;
@@ -108,7 +108,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(79, 183);
+            this.lblName.Location = new System.Drawing.Point(70, 253);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(168, 35);
             this.lblName.TabIndex = 15;
@@ -118,19 +118,20 @@
             // 
             this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
             this.btnBack.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBack.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(85, 605);
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(56, 685);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(147, 45);
             this.btnBack.TabIndex = 23;
             this.btnBack.Text = "Previous";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnAdd.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(373, 419);
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(291, 476);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(201, 53);
             this.btnAdd.TabIndex = 22;
