@@ -44,7 +44,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLogin.Location = new System.Drawing.Point(420, 418);
+            this.btnLogin.Location = new System.Drawing.Point(430, 601);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(172, 43);
             this.btnLogin.TabIndex = 11;
@@ -54,7 +54,7 @@
             // tbxPassword
             // 
             this.tbxPassword.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPassword.Location = new System.Drawing.Point(351, 308);
+            this.tbxPassword.Location = new System.Drawing.Point(301, 398);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(311, 40);
             this.tbxPassword.TabIndex = 10;
@@ -62,7 +62,7 @@
             // tbxUsername
             // 
             this.tbxUsername.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxUsername.Location = new System.Drawing.Point(351, 192);
+            this.tbxUsername.Location = new System.Drawing.Point(301, 326);
             this.tbxUsername.Name = "tbxUsername";
             this.tbxUsername.Size = new System.Drawing.Size(311, 40);
             this.tbxUsername.TabIndex = 9;
@@ -70,31 +70,31 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(143, 308);
+            this.lblPassword.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(139, 403);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(130, 31);
+            this.lblPassword.Size = new System.Drawing.Size(134, 35);
             this.lblPassword.TabIndex = 8;
             this.lblPassword.Text = "password:";
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(143, 201);
+            this.lblUserName.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(135, 326);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(136, 31);
+            this.lblUserName.Size = new System.Drawing.Size(138, 35);
             this.lblUserName.TabIndex = 7;
             this.lblUserName.Text = "username:";
             // 
             // lblSystemName
             // 
             this.lblSystemName.AutoSize = true;
-            this.lblSystemName.BackColor = System.Drawing.Color.Transparent;
+            this.lblSystemName.BackColor = System.Drawing.Color.CornflowerBlue;
             this.lblSystemName.Font = new System.Drawing.Font("Britannic Bold", 28.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSystemName.ForeColor = System.Drawing.Color.Gold;
+            this.lblSystemName.ForeColor = System.Drawing.Color.Navy;
             this.lblSystemName.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblSystemName.Location = new System.Drawing.Point(95, -10);
+            this.lblSystemName.Location = new System.Drawing.Point(53, 111);
             this.lblSystemName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSystemName.Name = "lblSystemName";
             this.lblSystemName.Size = new System.Drawing.Size(611, 104);
@@ -106,6 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
             this.ClientSize = new System.Drawing.Size(696, 839);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbxPassword);
