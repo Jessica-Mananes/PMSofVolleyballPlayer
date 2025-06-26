@@ -46,10 +46,10 @@
             btnBack.AccessibleRole = AccessibleRole.Sound;
             btnBack.BackColor = Color.CornflowerBlue;
             btnBack.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(230, 406);
+            btnBack.Location = new Point(279, 405);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(184, 53);
+            btnBack.Size = new Size(154, 53);
             btnBack.TabIndex = 44;
             btnBack.Text = "Previous";
             btnBack.UseVisualStyleBackColor = false;
@@ -68,10 +68,10 @@
             // 
             btnSave.BackColor = Color.CornflowerBlue;
             btnSave.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(430, 406);
+            btnSave.Location = new Point(439, 406);
             btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(186, 52);
+            btnSave.Size = new Size(138, 52);
             btnSave.TabIndex = 38;
             btnSave.Text = "Save Profile\r\n\r\n";
             btnSave.UseVisualStyleBackColor = false;
@@ -109,7 +109,9 @@
             // lblPosition
             // 
             lblPosition.AutoSize = true;
+            lblPosition.BackColor = Color.Transparent;
             lblPosition.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPosition.ForeColor = Color.Navy;
             lblPosition.Location = new Point(99, 322);
             lblPosition.Name = "lblPosition";
             lblPosition.Size = new Size(114, 35);
@@ -119,7 +121,9 @@
             // lblAge
             // 
             lblAge.AutoSize = true;
+            lblAge.BackColor = Color.Transparent;
             lblAge.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAge.ForeColor = Color.Navy;
             lblAge.Location = new Point(149, 252);
             lblAge.Name = "lblAge";
             lblAge.Size = new Size(64, 35);
@@ -129,7 +133,9 @@
             // lblName
             // 
             lblName.AutoSize = true;
+            lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblName.ForeColor = Color.Navy;
             lblName.Location = new Point(45, 183);
             lblName.Name = "lblName";
             lblName.Size = new Size(168, 35);
@@ -140,11 +146,11 @@
             // 
             Label3.AutoSize = true;
             Label3.BackColor = Color.CornflowerBlue;
-            Label3.Font = new Font("Impact", 25.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label3.Font = new Font("Impact", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Label3.ForeColor = Color.Navy;
-            Label3.Location = new Point(220, 46);
+            Label3.Location = new Point(230, 52);
             Label3.Name = "Label3";
-            Label3.Size = new Size(236, 53);
+            Label3.Size = new Size(259, 59);
             Label3.TabIndex = 30;
             Label3.Text = "EDIT PROFILE";
             // 
