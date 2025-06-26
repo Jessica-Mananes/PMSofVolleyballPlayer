@@ -101,7 +101,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
+            //BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
             ClientSize = new Size(696, 1049);
             Controls.Add(btnRefresh);
             Controls.Add(btnDelete);

@@ -122,7 +122,7 @@
             btnBack.AccessibleRole = AccessibleRole.Sound;
             btnBack.BackColor = Color.CornflowerBlue;
             btnBack.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(56, 856);
+            btnBack.Location = new Point(77, 559);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(147, 56);
@@ -137,7 +137,7 @@
             btnAdd.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdd.Location = new Point(426, 487);
             btnAdd.Margin = new Padding(3, 4, 3, 4);
-            btnAdd.Name = "btnAdd";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             btnAdd.Size = new Size(177, 43);
             btnAdd.TabIndex = 22;
             btnAdd.Text = "Add Player";
@@ -147,7 +147,6 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
             ClientSize = new Size(696, 1049);
             Controls.Add(btnBack);
             Controls.Add(btnAdd);

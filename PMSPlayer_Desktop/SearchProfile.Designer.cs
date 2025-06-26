@@ -52,7 +52,7 @@
             // 
             btnPrevious.BackColor = Color.CornflowerBlue;
             btnPrevious.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPrevious.Location = new Point(138, 585);
+            btnPrevious.Location = new Point(146, 583);
             btnPrevious.Margin = new Padding(3, 4, 3, 4);
             btnPrevious.Name = "btnPrevious";
             btnPrevious.Size = new Size(175, 61);
@@ -95,7 +95,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
+           // BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
             ClientSize = new Size(725, 1049);
             Controls.Add(btnRefresh);
             Controls.Add(btnPrevious);

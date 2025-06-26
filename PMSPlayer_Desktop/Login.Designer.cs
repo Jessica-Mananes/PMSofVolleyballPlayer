@@ -51,6 +51,7 @@
             btnLogin.TabIndex = 11;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // tbxPassword
             // 
@@ -63,6 +64,7 @@
             // 
             // tbxUsername
             // 
+            tbxUsername.Cursor = Cursors.IBeam;
             tbxUsername.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbxUsername.Location = new Point(301, 381);
             tbxUsername.Margin = new Padding(3, 4, 3, 4);
@@ -103,14 +105,12 @@
             lblSystemName.Size = new Size(611, 104);
             lblSystemName.TabIndex = 6;
             lblSystemName.Text = "          Volleyball Player\r\n Profile Management System";
-            lblSystemName.Click += lblSystemName_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
-            ClientSize = new Size(696, 1049);
+            ClientSize = new Size(696, 731);
             Controls.Add(btnLogin);
             Controls.Add(tbxPassword);
             Controls.Add(tbxUsername);

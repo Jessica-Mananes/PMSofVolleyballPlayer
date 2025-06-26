@@ -54,16 +54,19 @@
             btnBack.TabIndex = 44;
             btnBack.Text = "Previous";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // dgvData
             // 
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Location = new Point(66, 476);
+            dgvData.GridColor = SystemColors.HotTrack;
+            dgvData.Location = new Point(96, 472);
             dgvData.Margin = new Padding(3, 4, 3, 4);
             dgvData.Name = "dgvData";
             dgvData.RowHeadersWidth = 51;
-            dgvData.Size = new Size(529, 263);
+            dgvData.Size = new Size(483, 284);
             dgvData.TabIndex = 43;
+            dgvData.CellClick += dgvData_CellClick;
             // 
             // btnSave
             // 
@@ -76,6 +79,7 @@
             btnSave.TabIndex = 38;
             btnSave.Text = "Save Profile\r\n\r\n";
             btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // txbAge
             // 
@@ -100,7 +104,7 @@
             cmbPosition.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPosition.Font = new Font("Mongolian Baiti", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbPosition.FormattingEnabled = true;
-            cmbPosition.Items.AddRange(new object[] { "Libero", "Setter", "Blocker", "Opposite Spiker", "Opposite Hitter" });
+            cmbPosition.Items.AddRange(new object[] { "Setter", "Libero", "Opposite Hitter", "Blocker", "Middle Hitter", "Opposite Spiker", "Spiker" });
             cmbPosition.Location = new Point(243, 322);
             cmbPosition.Margin = new Padding(3, 4, 3, 4);
             cmbPosition.Name = "cmbPosition";
@@ -166,12 +170,12 @@
             btnRefresh.TabIndex = 45;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // EditProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
             ClientSize = new Size(696, 1049);
             Controls.Add(btnRefresh);
             Controls.Add(btnBack);
@@ -187,9 +191,11 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "EditProfile";
             Text = "EditProfile";
+            Load += EditProfile_Load;
             ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();
             ResumeLayout(false);
             PerformLayout();
+
 
         }
 

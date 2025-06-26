@@ -47,6 +47,7 @@
             btnSearch.TabIndex = 9;
             btnSearch.Text = "Search Profile";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnDelete
             // 
@@ -60,6 +61,7 @@
             btnDelete.TabIndex = 8;
             btnDelete.Text = "Delete Profile";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnEdit
             // 
@@ -73,6 +75,7 @@
             btnEdit.TabIndex = 7;
             btnEdit.Text = "Edit Profile";
             btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnView
             // 
@@ -86,6 +89,7 @@
             btnView.TabIndex = 6;
             btnView.Text = "View Profile";
             btnView.UseVisualStyleBackColor = false;
+            btnView.Click += btnView_Click;
             // 
             // btnCreate
             // 
@@ -99,13 +103,13 @@
             btnCreate.TabIndex = 5;
             btnCreate.Text = "Create Profile";
             btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.Click += btnCreate_Click;
             // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
-            ClientSize = new Size(696, 1049);
+            ClientSize = new Size(696, 732);
             Controls.Add(btnSearch);
             Controls.Add(btnDelete);
             Controls.Add(btnEdit);
