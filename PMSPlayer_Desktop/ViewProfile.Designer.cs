@@ -28,70 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBack = new System.Windows.Forms.Button();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.DataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
-            this.SuspendLayout();
+            btnBack = new Button();
+            Label3 = new Label();
+            DataGridView1 = new DataGridView();
+            Label1 = new Label();
+            btnRefresh = new Button();
+            ((System.ComponentModel.ISupportInitialize)DataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
-            this.btnBack.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(63, 675);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(147, 45);
-            this.btnBack.TabIndex = 35;
-            this.btnBack.Text = "Previous";
-            this.btnBack.UseVisualStyleBackColor = false;
+            btnBack.AccessibleRole = AccessibleRole.Sound;
+            btnBack.BackColor = Color.CornflowerBlue;
+            btnBack.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(63, 844);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(147, 56);
+            btnBack.TabIndex = 35;
+            btnBack.Text = "Previous";
+            btnBack.UseVisualStyleBackColor = false;
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Label3.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.Color.Navy;
-            this.Label3.Location = new System.Drawing.Point(247, 68);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(232, 48);
-            this.Label3.TabIndex = 34;
-            this.Label3.Text = "VIEW PROFILE";
+            Label3.AutoSize = true;
+            Label3.BackColor = Color.CornflowerBlue;
+            Label3.Font = new Font("Impact", 28F);
+            Label3.ForeColor = Color.Navy;
+            Label3.Location = new Point(220, 76);
+            Label3.Name = "Label3";
+            Label3.Size = new Size(273, 59);
+            Label3.TabIndex = 34;
+            Label3.Text = "VIEW PROFILE";
             // 
             // DataGridView1
             // 
-            this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Location = new System.Drawing.Point(50, 179);
-            this.DataGridView1.Name = "DataGridView1";
-            this.DataGridView1.RowHeadersWidth = 51;
-            this.DataGridView1.Size = new System.Drawing.Size(614, 361);
-            this.DataGridView1.TabIndex = 33;
+            DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridView1.Location = new Point(50, 224);
+            DataGridView1.Margin = new Padding(3, 4, 3, 4);
+            DataGridView1.Name = "DataGridView1";
+            DataGridView1.RowHeadersWidth = 51;
+            DataGridView1.Size = new Size(614, 335);
+            DataGridView1.TabIndex = 33;
             // 
             // Label1
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(236, 45);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(0, 16);
-            this.Label1.TabIndex = 32;
+            Label1.AutoSize = true;
+            Label1.Location = new Point(236, 56);
+            Label1.Name = "Label1";
+            Label1.Size = new Size(0, 20);
+            Label1.TabIndex = 32;
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.BackColor = Color.CornflowerBlue;
+            btnRefresh.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefresh.Location = new Point(489, 606);
+            btnRefresh.Margin = new Padding(3, 4, 3, 4);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(136, 48);
+            btnRefresh.TabIndex = 36;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
             // 
             // ViewProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
-            this.ClientSize = new System.Drawing.Size(696, 839);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.Label3);
-            this.Controls.Add(this.DataGridView1);
-            this.Controls.Add(this.Label1);
-            this.Name = "ViewProfile";
-            this.Text = "ViewProfile";
-            this.Load += new System.EventHandler(this.ViewProfile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
+            ClientSize = new Size(696, 1049);
+            Controls.Add(btnRefresh);
+            Controls.Add(btnBack);
+            Controls.Add(Label3);
+            Controls.Add(DataGridView1);
+            Controls.Add(Label1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "ViewProfile";
+            Text = "ViewProfile";
+            Load += ViewProfile_Load;
+            ((System.ComponentModel.ISupportInitialize)DataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -101,5 +118,6 @@
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.DataGridView DataGridView1;
         internal System.Windows.Forms.Label Label1;
+        internal Button btnRefresh;
     }
 }
