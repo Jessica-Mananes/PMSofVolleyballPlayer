@@ -28,80 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.dgvSearch = new System.Windows.Forms.DataGridView();
-            this.txbSearchArea = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
-            this.SuspendLayout();
+            btnRefresh = new Button();
+            btnPrevious = new Button();
+            dgvSearch = new DataGridView();
+            txbSearchArea = new TextBox();
+            btnSearch = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvSearch).BeginInit();
+            SuspendLayout();
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(302, 651);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(175, 52);
-            this.btnRefresh.TabIndex = 9;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.BackColor = Color.CornflowerBlue;
+            btnRefresh.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefresh.Location = new Point(302, 814);
+            btnRefresh.Margin = new Padding(3, 4, 3, 4);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(175, 65);
+            btnRefresh.TabIndex = 9;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
             // 
             // btnPrevious
             // 
-            this.btnPrevious.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevious.Location = new System.Drawing.Point(109, 651);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(175, 49);
-            this.btnPrevious.TabIndex = 8;
-            this.btnPrevious.Text = "Previous";
-            this.btnPrevious.UseVisualStyleBackColor = false;
+            btnPrevious.BackColor = Color.CornflowerBlue;
+            btnPrevious.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPrevious.Location = new Point(109, 814);
+            btnPrevious.Margin = new Padding(3, 4, 3, 4);
+            btnPrevious.Name = "btnPrevious";
+            btnPrevious.Size = new Size(175, 61);
+            btnPrevious.TabIndex = 8;
+            btnPrevious.Text = "Previous";
+            btnPrevious.UseVisualStyleBackColor = false;
             // 
             // dgvSearch
             // 
-            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(37, 208);
-            this.dgvSearch.Name = "dgvSearch";
-            this.dgvSearch.RowHeadersWidth = 51;
-            this.dgvSearch.Size = new System.Drawing.Size(644, 353);
-            this.dgvSearch.TabIndex = 7;
+            dgvSearch.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSearch.Location = new Point(37, 260);
+            dgvSearch.Margin = new Padding(3, 4, 3, 4);
+            dgvSearch.Name = "dgvSearch";
+            dgvSearch.RowHeadersWidth = 51;
+            dgvSearch.Size = new Size(644, 441);
+            dgvSearch.TabIndex = 7;
             // 
             // txbSearchArea
             // 
-            this.txbSearchArea.Font = new System.Drawing.Font("Microsoft Himalaya", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSearchArea.Location = new System.Drawing.Point(78, 91);
-            this.txbSearchArea.Name = "txbSearchArea";
-            this.txbSearchArea.Size = new System.Drawing.Size(418, 47);
-            this.txbSearchArea.TabIndex = 6;
+            txbSearchArea.Font = new Font("Microsoft Himalaya", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbSearchArea.Location = new Point(78, 114);
+            txbSearchArea.Margin = new Padding(3, 4, 3, 4);
+            txbSearchArea.Name = "txbSearchArea";
+            txbSearchArea.Size = new Size(418, 47);
+            txbSearchArea.TabIndex = 6;
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(522, 91);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(148, 47);
-            this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.BackColor = Color.CornflowerBlue;
+            btnSearch.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSearch.Location = new Point(522, 114);
+            btnSearch.Margin = new Padding(3, 4, 3, 4);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(148, 59);
+            btnSearch.TabIndex = 5;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
             // 
             // SearchProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
-            this.ClientSize = new System.Drawing.Size(725, 839);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnPrevious);
-            this.Controls.Add(this.dgvSearch);
-            this.Controls.Add(this.txbSearchArea);
-            this.Controls.Add(this.btnSearch);
-            this.Name = "SearchProfile";
-            this.Text = "SearchProfile";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Player_Desktop.Properties.Resources.bgLogin;
+            ClientSize = new Size(725, 1049);
+            Controls.Add(btnRefresh);
+            Controls.Add(btnPrevious);
+            Controls.Add(dgvSearch);
+            Controls.Add(txbSearchArea);
+            Controls.Add(btnSearch);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "SearchProfile";
+            Text = "SearchProfile";
+            ((System.ComponentModel.ISupportInitialize)dgvSearch).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
