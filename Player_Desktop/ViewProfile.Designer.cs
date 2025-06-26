@@ -32,6 +32,7 @@
             Label3 = new Label();
             DataGridView1 = new DataGridView();
             Label1 = new Label();
+            btnRefresh = new Button();
             ((System.ComponentModel.ISupportInitialize)DataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             btnBack.AccessibleRole = AccessibleRole.Sound;
             btnBack.BackColor = Color.CornflowerBlue;
             btnBack.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(63, 844);
+            btnBack.Location = new Point(66, 639);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(147, 56);
@@ -63,11 +64,11 @@
             // DataGridView1
             // 
             DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridView1.Location = new Point(50, 224);
+            DataGridView1.Location = new Point(38, 180);
             DataGridView1.Margin = new Padding(3, 4, 3, 4);
             DataGridView1.Name = "DataGridView1";
             DataGridView1.RowHeadersWidth = 51;
-            DataGridView1.Size = new Size(614, 451);
+            DataGridView1.Size = new Size(614, 364);
             DataGridView1.TabIndex = 33;
             // 
             // Label1
@@ -78,12 +79,26 @@
             Label1.Size = new Size(0, 20);
             Label1.TabIndex = 32;
             // 
+            // btnRefresh
+            // 
+            btnRefresh.AccessibleRole = AccessibleRole.Sound;
+            btnRefresh.BackColor = Color.CornflowerBlue;
+            btnRefresh.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefresh.Location = new Point(251, 640);
+            btnRefresh.Margin = new Padding(3, 4, 3, 4);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(143, 56);
+            btnRefresh.TabIndex = 39;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
+            // 
             // ViewProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Player_Desktop.Properties.Resources.bgLogin;
             ClientSize = new Size(696, 1049);
+            Controls.Add(btnRefresh);
             Controls.Add(btnBack);
             Controls.Add(Label3);
             Controls.Add(DataGridView1);
@@ -104,5 +119,6 @@
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.DataGridView DataGridView1;
         internal System.Windows.Forms.Label Label1;
+        internal Button btnRefresh;
     }
 }

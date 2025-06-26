@@ -33,6 +33,7 @@
             dgvSearch = new DataGridView();
             txbSearchArea = new TextBox();
             btnSearch = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvSearch).BeginInit();
             SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             dgvSearch.Margin = new Padding(3, 4, 3, 4);
             dgvSearch.Name = "dgvSearch";
             dgvSearch.RowHeadersWidth = 51;
-            dgvSearch.Size = new Size(644, 441);
+            dgvSearch.Size = new Size(644, 356);
             dgvSearch.TabIndex = 7;
             // 
             // txbSearchArea
@@ -91,12 +92,26 @@
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            button1.AccessibleRole = AccessibleRole.Sound;
+            button1.BackColor = Color.CornflowerBlue;
+            button1.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(279, 664);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(137, 45);
+            button1.TabIndex = 40;
+            button1.Text = "Refresh";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // SearchProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Player_Desktop.Properties.Resources.bgLogin;
             ClientSize = new Size(725, 1049);
+            Controls.Add(button1);
             Controls.Add(btnRefresh);
             Controls.Add(btnPrevious);
             Controls.Add(dgvSearch);
@@ -118,5 +133,6 @@
         internal System.Windows.Forms.DataGridView dgvSearch;
         internal System.Windows.Forms.TextBox txbSearchArea;
         internal System.Windows.Forms.Button btnSearch;
+        internal Button button1;
     }
 }
