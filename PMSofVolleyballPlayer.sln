@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VballAPI", "VballAPI\VballA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vball_BusinessDataLogic", "Vball_BusinessDataLogic\Vball_BusinessDataLogic.csproj", "{9554CDC6-B045-7F85-38ED-529E36451275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VbPMS_Desktop", "VbPMS_Desktop\VbPMS_Desktop.csproj", "{7945C6AD-FF06-4EA7-BFB4-61F6D41142FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMSPlayer_Desktop", "PMSPlayer_Desktop\PMSPlayer_Desktop.csproj", "{BAF91473-984D-47A9-ADC6-DA2DF01E9777}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +49,10 @@ Global
 		{9554CDC6-B045-7F85-38ED-529E36451275}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9554CDC6-B045-7F85-38ED-529E36451275}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9554CDC6-B045-7F85-38ED-529E36451275}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7945C6AD-FF06-4EA7-BFB4-61F6D41142FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7945C6AD-FF06-4EA7-BFB4-61F6D41142FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7945C6AD-FF06-4EA7-BFB4-61F6D41142FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7945C6AD-FF06-4EA7-BFB4-61F6D41142FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF91473-984D-47A9-ADC6-DA2DF01E9777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF91473-984D-47A9-ADC6-DA2DF01E9777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF91473-984D-47A9-ADC6-DA2DF01E9777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF91473-984D-47A9-ADC6-DA2DF01E9777}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

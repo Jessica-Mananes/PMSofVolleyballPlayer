@@ -1,4 +1,4 @@
-﻿namespace VballPlayer_Desktop
+﻿namespace PMSPlayer_Desktop
 {
     partial class ViewProfile
     {
