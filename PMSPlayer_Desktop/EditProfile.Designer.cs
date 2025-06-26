@@ -1,4 +1,4 @@
-﻿namespace VballPlayer_Desktop
+﻿namespace PMSPlayer_Desktop
 {
     partial class EditProfile
     {
@@ -28,146 +28,162 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBack = new System.Windows.Forms.Button();
-            this.dgvData = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.txbAge = new System.Windows.Forms.TextBox();
-            this.txbName = new System.Windows.Forms.TextBox();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
-            this.SuspendLayout();
+            btnBack = new Button();
+            dgvData = new DataGridView();
+            btnSave = new Button();
+            txbAge = new TextBox();
+            txbName = new TextBox();
+            cmbPosition = new ComboBox();
+            lblPosition = new Label();
+            lblAge = new Label();
+            lblName = new Label();
+            Label3 = new Label();
+            btnRefresh = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
+            SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
-            this.btnBack.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(220, 425);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(184, 52);
-            this.btnBack.TabIndex = 44;
-            this.btnBack.Text = "Previous";
-            this.btnBack.UseVisualStyleBackColor = false;
+            btnBack.AccessibleRole = AccessibleRole.Sound;
+            btnBack.BackColor = Color.CornflowerBlue;
+            btnBack.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(262, 403);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(154, 46);
+            btnBack.TabIndex = 44;
+            btnBack.Text = "Previous";
+            btnBack.UseVisualStyleBackColor = false;
             // 
             // dgvData
             // 
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(23, 540);
-            this.dgvData.Name = "dgvData";
-            this.dgvData.RowHeadersWidth = 51;
-            this.dgvData.Size = new System.Drawing.Size(635, 239);
-            this.dgvData.TabIndex = 43;
+            dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvData.Location = new Point(66, 476);
+            dgvData.Margin = new Padding(3, 4, 3, 4);
+            dgvData.Name = "dgvData";
+            dgvData.RowHeadersWidth = 51;
+            dgvData.Size = new Size(529, 263);
+            dgvData.TabIndex = 43;
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(431, 425);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(186, 52);
-            this.btnSave.TabIndex = 38;
-            this.btnSave.Text = "Save Profile\r\n\r\n";
-            this.btnSave.UseVisualStyleBackColor = false;
+            btnSave.BackColor = Color.CornflowerBlue;
+            btnSave.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSave.Location = new Point(441, 403);
+            btnSave.Margin = new Padding(3, 4, 3, 4);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(154, 45);
+            btnSave.TabIndex = 38;
+            btnSave.Text = "Save Profile\r\n\r\n";
+            btnSave.UseVisualStyleBackColor = false;
             // 
             // txbAge
             // 
-            this.txbAge.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbAge.Location = new System.Drawing.Point(247, 259);
-            this.txbAge.Name = "txbAge";
-            this.txbAge.Size = new System.Drawing.Size(400, 34);
-            this.txbAge.TabIndex = 37;
+            txbAge.Font = new Font("Mongolian Baiti", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbAge.Location = new Point(245, 266);
+            txbAge.Margin = new Padding(3, 4, 3, 4);
+            txbAge.Name = "txbAge";
+            txbAge.Size = new Size(400, 34);
+            txbAge.TabIndex = 37;
             // 
             // txbName
             // 
-            this.txbName.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbName.Location = new System.Drawing.Point(247, 196);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(400, 34);
-            this.txbName.TabIndex = 36;
+            txbName.Font = new Font("Mongolian Baiti", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbName.Location = new Point(245, 195);
+            txbName.Margin = new Padding(3, 4, 3, 4);
+            txbName.Name = "txbName";
+            txbName.Size = new Size(400, 34);
+            txbName.TabIndex = 36;
             // 
             // cmbPosition
             // 
-            this.cmbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPosition.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Items.AddRange(new object[] {
-            "Libero",
-            "Setter",
-            "Blocker",
-            "Opposite Spiker",
-            "Opposite Hitter"});
-            this.cmbPosition.Location = new System.Drawing.Point(245, 328);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(402, 32);
-            this.cmbPosition.TabIndex = 35;
+            cmbPosition.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPosition.Font = new Font("Mongolian Baiti", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbPosition.FormattingEnabled = true;
+            cmbPosition.Items.AddRange(new object[] { "Libero", "Setter", "Blocker", "Opposite Spiker", "Opposite Hitter" });
+            cmbPosition.Location = new Point(243, 322);
+            cmbPosition.Margin = new Padding(3, 4, 3, 4);
+            cmbPosition.Name = "cmbPosition";
+            cmbPosition.Size = new Size(402, 32);
+            cmbPosition.TabIndex = 35;
             // 
             // lblPosition
             // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.Location = new System.Drawing.Point(99, 328);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(114, 35);
-            this.lblPosition.TabIndex = 33;
-            this.lblPosition.Text = "Position:";
+            lblPosition.AutoSize = true;
+            lblPosition.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPosition.Location = new Point(66, 316);
+            lblPosition.Name = "lblPosition";
+            lblPosition.Size = new Size(114, 35);
+            lblPosition.TabIndex = 33;
+            lblPosition.Text = "Position:";
             // 
             // lblAge
             // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(133, 259);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(64, 35);
-            this.lblAge.TabIndex = 32;
-            this.lblAge.Text = "Age:";
+            lblAge.AutoSize = true;
+            lblAge.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAge.Location = new Point(66, 250);
+            lblAge.Name = "lblAge";
+            lblAge.Size = new Size(64, 35);
+            lblAge.TabIndex = 32;
+            lblAge.Text = "Age:";
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(59, 196);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(168, 35);
-            this.lblName.TabIndex = 31;
-            this.lblName.Text = "Player Name: ";
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblName.Location = new Point(57, 189);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(168, 35);
+            lblName.TabIndex = 31;
+            lblName.Text = "Player Name: ";
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Label3.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.Color.Navy;
-            this.Label3.Location = new System.Drawing.Point(236, 67);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(240, 54);
-            this.Label3.TabIndex = 30;
-            this.Label3.Text = "EDIT PROFILE";
+            Label3.AutoSize = true;
+            Label3.BackColor = Color.CornflowerBlue;
+            Label3.Font = new Font("Impact", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label3.ForeColor = Color.Navy;
+            Label3.Location = new Point(220, 43);
+            Label3.Name = "Label3";
+            Label3.Size = new Size(259, 59);
+            Label3.TabIndex = 30;
+            Label3.Text = "EDIT PROFILE";
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.BackColor = Color.CornflowerBlue;
+            btnRefresh.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefresh.Location = new Point(96, 404);
+            btnRefresh.Margin = new Padding(3, 4, 3, 4);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(139, 44);
+            btnRefresh.TabIndex = 45;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
             // 
             // EditProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
-            this.ClientSize = new System.Drawing.Size(696, 839);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.dgvData);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txbAge);
-            this.Controls.Add(this.txbName);
-            this.Controls.Add(this.cmbPosition);
-            this.Controls.Add(this.lblPosition);
-            this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.Label3);
-            this.Name = "EditProfile";
-            this.Text = "EditProfile";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
+            ClientSize = new Size(696, 1049);
+            Controls.Add(btnRefresh);
+            Controls.Add(btnBack);
+            Controls.Add(dgvData);
+            Controls.Add(btnSave);
+            Controls.Add(txbAge);
+            Controls.Add(txbName);
+            Controls.Add(cmbPosition);
+            Controls.Add(lblPosition);
+            Controls.Add(lblAge);
+            Controls.Add(lblName);
+            Controls.Add(Label3);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "EditProfile";
+            Text = "EditProfile";
+            ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -183,5 +199,6 @@
         internal System.Windows.Forms.Label lblAge;
         internal System.Windows.Forms.Label lblName;
         internal System.Windows.Forms.Label Label3;
+        internal Button btnRefresh;
     }
 }

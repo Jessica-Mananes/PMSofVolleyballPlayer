@@ -44,10 +44,10 @@
             btnLogin.FlatStyle = FlatStyle.Popup;
             btnLogin.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = SystemColors.ControlText;
-            btnLogin.Location = new Point(424, 651);
+            btnLogin.Location = new Point(424, 577);
             btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(172, 54);
+            btnLogin.Size = new Size(161, 53);
             btnLogin.TabIndex = 11;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -55,7 +55,7 @@
             // tbxPassword
             // 
             tbxPassword.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbxPassword.Location = new Point(301, 498);
+            tbxPassword.Location = new Point(301, 451);
             tbxPassword.Margin = new Padding(3, 4, 3, 4);
             tbxPassword.Name = "tbxPassword";
             tbxPassword.Size = new Size(311, 40);
@@ -64,7 +64,7 @@
             // tbxUsername
             // 
             tbxUsername.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbxUsername.Location = new Point(301, 408);
+            tbxUsername.Location = new Point(301, 381);
             tbxUsername.Margin = new Padding(3, 4, 3, 4);
             tbxUsername.Name = "tbxUsername";
             tbxUsername.Size = new Size(311, 40);
@@ -74,7 +74,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPassword.Location = new Point(139, 504);
+            lblPassword.Location = new Point(135, 451);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(134, 35);
             lblPassword.TabIndex = 8;
@@ -84,7 +84,7 @@
             // 
             lblUserName.AutoSize = true;
             lblUserName.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUserName.Location = new Point(135, 408);
+            lblUserName.Location = new Point(135, 381);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(138, 35);
             lblUserName.TabIndex = 7;
