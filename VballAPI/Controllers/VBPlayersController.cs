@@ -10,7 +10,10 @@ namespace VballAPI.Controllers
     [ApiController]
     public class VBPlayersController : ControllerBase
     {
-        private static readonly InMemoryPlayerData dataSource = new InMemoryPlayerData();
+        // private static readonly InMemoryPlayerData dataSource = new InMemoryPlayerData();
+          private static readonly DBDataPlayer dataSource = new DBDataPlayer();
+        // private static readonly JsonFilePlayerData dataSource = new JsonFilePlayerData();
+        //private static readonly TextFilePlayerData dataSource = new TextFilePlayerData();
 
 
         private static readonly PlayerService playerService = new PlayerService(dataSource);
