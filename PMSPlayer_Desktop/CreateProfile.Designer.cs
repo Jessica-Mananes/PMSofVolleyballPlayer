@@ -1,4 +1,4 @@
-﻿namespace VballPlayer_Desktop
+﻿namespace PMSPlayer_Desktop
 {
     partial class CreateProfile
     {
@@ -28,135 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Label3 = new System.Windows.Forms.Label();
-            this.txbAge = new System.Windows.Forms.TextBox();
-            this.txbName = new System.Windows.Forms.TextBox();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            Label3 = new Label();
+            txbAge = new TextBox();
+            txbName = new TextBox();
+            cmbPosition = new ComboBox();
+            lblPosition = new Label();
+            lblAge = new Label();
+            lblName = new Label();
+            btnBack = new Button();
+            btnAdd = new Button();
+            SuspendLayout();
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Label3.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.Color.Navy;
-            this.Label3.Location = new System.Drawing.Point(203, 93);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(289, 54);
-            this.Label3.TabIndex = 21;
-            this.Label3.Text = "CREATE PROFILE";
+            Label3.AutoSize = true;
+            Label3.BackColor = Color.CornflowerBlue;
+            Label3.Font = new Font("Impact", 25.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label3.ForeColor = Color.Navy;
+            Label3.Location = new Point(203, 116);
+            Label3.Name = "Label3";
+            Label3.Size = new Size(284, 53);
+            Label3.TabIndex = 21;
+            Label3.Text = "CREATE PROFILE";
             // 
             // txbAge
             // 
-            this.txbAge.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbAge.Location = new System.Drawing.Point(263, 312);
-            this.txbAge.Name = "txbAge";
-            this.txbAge.Size = new System.Drawing.Size(402, 31);
-            this.txbAge.TabIndex = 20;
+            txbAge.Font = new Font("Mongolian Baiti", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbAge.Location = new Point(263, 390);
+            txbAge.Margin = new Padding(3, 4, 3, 4);
+            txbAge.Name = "txbAge";
+            txbAge.Size = new Size(402, 31);
+            txbAge.TabIndex = 20;
             // 
             // txbName
             // 
-            this.txbName.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbName.Location = new System.Drawing.Point(261, 253);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(400, 31);
-            this.txbName.TabIndex = 19;
+            txbName.Font = new Font("Mongolian Baiti", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbName.Location = new Point(261, 316);
+            txbName.Margin = new Padding(3, 4, 3, 4);
+            txbName.Name = "txbName";
+            txbName.Size = new Size(400, 31);
+            txbName.TabIndex = 19;
             // 
             // cmbPosition
             // 
-            this.cmbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPosition.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Items.AddRange(new object[] {
-            "Libero",
-            "Setter",
-            "Blocker",
-            "Opposite Spiker",
-            "Opposite Hitter",
-            "Middle Hitter"});
-            this.cmbPosition.Location = new System.Drawing.Point(261, 370);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(402, 32);
-            this.cmbPosition.TabIndex = 18;
+            cmbPosition.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPosition.Font = new Font("Mongolian Baiti", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbPosition.FormattingEnabled = true;
+            cmbPosition.Items.AddRange(new object[] { "Libero", "Setter", "Blocker", "Opposite Spiker", "Opposite Hitter", "Middle Hitter" });
+            cmbPosition.Location = new Point(261, 462);
+            cmbPosition.Margin = new Padding(3, 4, 3, 4);
+            cmbPosition.Name = "cmbPosition";
+            cmbPosition.Size = new Size(402, 32);
+            cmbPosition.TabIndex = 18;
             // 
             // lblPosition
             // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.Location = new System.Drawing.Point(124, 370);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(114, 35);
-            this.lblPosition.TabIndex = 17;
-            this.lblPosition.Text = "Position:";
+            lblPosition.AutoSize = true;
+            lblPosition.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPosition.Location = new Point(70, 456);
+            lblPosition.Name = "lblPosition";
+            lblPosition.Size = new Size(114, 35);
+            lblPosition.TabIndex = 17;
+            lblPosition.Text = "Position:";
             // 
             // lblAge
             // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(97, 308);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(141, 35);
-            this.lblAge.TabIndex = 16;
-            this.lblAge.Text = "Player Age:";
+            lblAge.AutoSize = true;
+            lblAge.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAge.Location = new Point(70, 382);
+            lblAge.Name = "lblAge";
+            lblAge.Size = new Size(141, 35);
+            lblAge.TabIndex = 16;
+            lblAge.Text = "Player Age:";
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(70, 253);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(168, 35);
-            this.lblName.TabIndex = 15;
-            this.lblName.Text = "Player Name: ";
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblName.Location = new Point(70, 316);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(168, 35);
+            lblName.TabIndex = 15;
+            lblName.Text = "Player Name: ";
             // 
             // btnBack
             // 
-            this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
-            this.btnBack.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(56, 685);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(147, 45);
-            this.btnBack.TabIndex = 23;
-            this.btnBack.Text = "Previous";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            btnBack.AccessibleRole = AccessibleRole.Sound;
+            btnBack.BackColor = Color.CornflowerBlue;
+            btnBack.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(56, 856);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(147, 56);
+            btnBack.TabIndex = 23;
+            btnBack.Text = "Previous";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(407, 471);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(171, 60);
-            this.btnAdd.TabIndex = 22;
-            this.btnAdd.Text = "Add Player";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.BackColor = Color.CornflowerBlue;
+            btnAdd.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdd.Location = new Point(411, 560);
+            btnAdd.Margin = new Padding(3, 4, 3, 4);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(171, 60);
+            btnAdd.TabIndex = 22;
+            btnAdd.Text = "Add Player";
+            btnAdd.UseVisualStyleBackColor = false;
             // 
             // CreateProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
-            this.ClientSize = new System.Drawing.Size(696, 839);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.Label3);
-            this.Controls.Add(this.txbAge);
-            this.Controls.Add(this.txbName);
-            this.Controls.Add(this.cmbPosition);
-            this.Controls.Add(this.lblPosition);
-            this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.lblName);
-            this.Name = "CreateProfile";
-            this.Text = "CreateProfile";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
+            ClientSize = new Size(696, 1049);
+            Controls.Add(btnBack);
+            Controls.Add(btnAdd);
+            Controls.Add(Label3);
+            Controls.Add(txbAge);
+            Controls.Add(txbName);
+            Controls.Add(cmbPosition);
+            Controls.Add(lblPosition);
+            Controls.Add(lblAge);
+            Controls.Add(lblName);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "CreateProfile";
+            Text = "CreateProfile";
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
