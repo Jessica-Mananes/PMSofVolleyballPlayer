@@ -110,6 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            //BackgroundImage = Properties.Resources.bgLogin;
             ClientSize = new Size(696, 731);
             Controls.Add(btnLogin);
             Controls.Add(tbxPassword);

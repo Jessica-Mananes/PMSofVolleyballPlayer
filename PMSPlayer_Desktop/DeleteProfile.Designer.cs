@@ -41,7 +41,7 @@
             btnRefresh.AccessibleRole = AccessibleRole.Sound;
             btnRefresh.BackColor = Color.CornflowerBlue;
             btnRefresh.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(250, 566);
+            btnRefresh.Location = new Point(260, 566);
             btnRefresh.Margin = new Padding(3, 4, 3, 4);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(143, 56);
@@ -55,7 +55,7 @@
             btnDelete.AccessibleRole = AccessibleRole.Sound;
             btnDelete.BackColor = Color.CornflowerBlue;
             btnDelete.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDelete.Location = new Point(433, 566);
+            btnDelete.Location = new Point(446, 566);
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(143, 56);
@@ -81,11 +81,11 @@
             // dgvDeleteProfile
             // 
             dgvDeleteProfile.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDeleteProfile.Location = new Point(118, 194);
+            dgvDeleteProfile.Location = new Point(119, 196);
             dgvDeleteProfile.Margin = new Padding(3, 4, 3, 4);
             dgvDeleteProfile.Name = "dgvDeleteProfile";
             dgvDeleteProfile.RowHeadersWidth = 51;
-            dgvDeleteProfile.Size = new Size(444, 322);
+            dgvDeleteProfile.Size = new Size(436, 322);
             dgvDeleteProfile.TabIndex = 35;
             dgvDeleteProfile.CellClick += dgvDeleteProfile_CellClick;
             // 
