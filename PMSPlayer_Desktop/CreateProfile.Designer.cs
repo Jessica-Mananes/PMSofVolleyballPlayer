@@ -54,7 +54,7 @@
             // txbAge
             // 
             txbAge.Font = new Font("Mongolian Baiti", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbAge.Location = new Point(263, 390);
+            txbAge.Location = new Point(240, 325);
             txbAge.Margin = new Padding(3, 4, 3, 4);
             txbAge.Name = "txbAge";
             txbAge.Size = new Size(402, 31);
@@ -63,7 +63,7 @@
             // txbName
             // 
             txbName.Font = new Font("Mongolian Baiti", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbName.Location = new Point(261, 316);
+            txbName.Location = new Point(242, 253);
             txbName.Margin = new Padding(3, 4, 3, 4);
             txbName.Name = "txbName";
             txbName.Size = new Size(400, 31);
@@ -75,7 +75,7 @@
             cmbPosition.Font = new Font("Mongolian Baiti", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbPosition.FormattingEnabled = true;
             cmbPosition.Items.AddRange(new object[] { "Libero", "Setter", "Blocker", "Opposite Spiker", "Opposite Hitter", "Middle Hitter" });
-            cmbPosition.Location = new Point(261, 462);
+            cmbPosition.Location = new Point(240, 398);
             cmbPosition.Margin = new Padding(3, 4, 3, 4);
             cmbPosition.Name = "cmbPosition";
             cmbPosition.Size = new Size(402, 32);
@@ -84,8 +84,10 @@
             // lblPosition
             // 
             lblPosition.AutoSize = true;
+            lblPosition.BackColor = Color.Transparent;
             lblPosition.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPosition.Location = new Point(70, 456);
+            lblPosition.ForeColor = Color.Navy;
+            lblPosition.Location = new Point(56, 392);
             lblPosition.Name = "lblPosition";
             lblPosition.Size = new Size(114, 35);
             lblPosition.TabIndex = 17;
@@ -94,8 +96,10 @@
             // lblAge
             // 
             lblAge.AutoSize = true;
+            lblAge.BackColor = Color.Transparent;
             lblAge.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAge.Location = new Point(70, 382);
+            lblAge.ForeColor = Color.Navy;
+            lblAge.Location = new Point(56, 325);
             lblAge.Name = "lblAge";
             lblAge.Size = new Size(141, 35);
             lblAge.TabIndex = 16;
@@ -104,8 +108,10 @@
             // lblName
             // 
             lblName.AutoSize = true;
+            lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblName.Location = new Point(70, 316);
+            lblName.ForeColor = Color.Navy;
+            lblName.Location = new Point(56, 253);
             lblName.Name = "lblName";
             lblName.Size = new Size(168, 35);
             lblName.TabIndex = 15;
@@ -129,10 +135,10 @@
             // 
             btnAdd.BackColor = Color.CornflowerBlue;
             btnAdd.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdd.Location = new Point(411, 560);
+            btnAdd.Location = new Point(426, 487);
             btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(171, 60);
+            btnAdd.Size = new Size(177, 43);
             btnAdd.TabIndex = 22;
             btnAdd.Text = "Add Player";
             btnAdd.UseVisualStyleBackColor = false;

@@ -110,7 +110,9 @@
             // lblPosition
             // 
             lblPosition.AutoSize = true;
+            lblPosition.BackColor = Color.Transparent;
             lblPosition.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPosition.ForeColor = Color.Navy;
             lblPosition.Location = new Point(66, 316);
             lblPosition.Name = "lblPosition";
             lblPosition.Size = new Size(114, 35);
@@ -120,7 +122,9 @@
             // lblAge
             // 
             lblAge.AutoSize = true;
+            lblAge.BackColor = Color.Transparent;
             lblAge.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAge.ForeColor = Color.Navy;
             lblAge.Location = new Point(66, 250);
             lblAge.Name = "lblAge";
             lblAge.Size = new Size(64, 35);
@@ -130,7 +134,9 @@
             // lblName
             // 
             lblName.AutoSize = true;
+            lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblName.ForeColor = Color.Navy;
             lblName.Location = new Point(57, 189);
             lblName.Name = "lblName";
             lblName.Size = new Size(168, 35);
