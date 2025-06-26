@@ -43,18 +43,18 @@
             // 
             Label3.AutoSize = true;
             Label3.BackColor = Color.CornflowerBlue;
-            Label3.Font = new Font("Impact", 25.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label3.Font = new Font("Impact", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Label3.ForeColor = Color.Navy;
-            Label3.Location = new Point(203, 116);
+            Label3.Location = new Point(182, 92);
             Label3.Name = "Label3";
-            Label3.Size = new Size(284, 53);
+            Label3.Size = new Size(311, 59);
             Label3.TabIndex = 21;
             Label3.Text = "CREATE PROFILE";
             // 
             // txbAge
             // 
             txbAge.Font = new Font("Mongolian Baiti", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbAge.Location = new Point(263, 390);
+            txbAge.Location = new Point(226, 324);
             txbAge.Margin = new Padding(3, 4, 3, 4);
             txbAge.Name = "txbAge";
             txbAge.Size = new Size(402, 31);
@@ -63,7 +63,7 @@
             // txbName
             // 
             txbName.Font = new Font("Mongolian Baiti", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbName.Location = new Point(261, 316);
+            txbName.Location = new Point(226, 260);
             txbName.Margin = new Padding(3, 4, 3, 4);
             txbName.Name = "txbName";
             txbName.Size = new Size(400, 31);
@@ -75,7 +75,7 @@
             cmbPosition.Font = new Font("Mongolian Baiti", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbPosition.FormattingEnabled = true;
             cmbPosition.Items.AddRange(new object[] { "Libero", "Setter", "Blocker", "Opposite Spiker", "Opposite Hitter", "Middle Hitter" });
-            cmbPosition.Location = new Point(261, 462);
+            cmbPosition.Location = new Point(224, 379);
             cmbPosition.Margin = new Padding(3, 4, 3, 4);
             cmbPosition.Name = "cmbPosition";
             cmbPosition.Size = new Size(402, 32);
@@ -84,8 +84,10 @@
             // lblPosition
             // 
             lblPosition.AutoSize = true;
+            lblPosition.BackColor = Color.Transparent;
             lblPosition.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPosition.Location = new Point(124, 462);
+            lblPosition.ForeColor = Color.Navy;
+            lblPosition.Location = new Point(52, 373);
             lblPosition.Name = "lblPosition";
             lblPosition.Size = new Size(114, 35);
             lblPosition.TabIndex = 17;
@@ -94,8 +96,10 @@
             // lblAge
             // 
             lblAge.AutoSize = true;
+            lblAge.BackColor = Color.Transparent;
             lblAge.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAge.Location = new Point(97, 385);
+            lblAge.ForeColor = Color.Navy;
+            lblAge.Location = new Point(52, 316);
             lblAge.Name = "lblAge";
             lblAge.Size = new Size(141, 35);
             lblAge.TabIndex = 16;
@@ -104,8 +108,10 @@
             // lblName
             // 
             lblName.AutoSize = true;
+            lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblName.Location = new Point(70, 316);
+            lblName.ForeColor = Color.Navy;
+            lblName.Location = new Point(52, 252);
             lblName.Name = "lblName";
             lblName.Size = new Size(168, 35);
             lblName.TabIndex = 15;
@@ -115,10 +121,10 @@
             // 
             btnAdd.BackColor = Color.CornflowerBlue;
             btnAdd.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdd.Location = new Point(407, 589);
+            btnAdd.Location = new Point(412, 481);
             btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(171, 75);
+            btnAdd.Size = new Size(171, 53);
             btnAdd.TabIndex = 22;
             btnAdd.Text = "Add Player";
             btnAdd.UseVisualStyleBackColor = false;
