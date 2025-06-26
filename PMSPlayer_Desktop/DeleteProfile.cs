@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VballPlayer_Desktop
+namespace PMSPlayer_Desktop
 {
     public partial class DeleteProfile : Form
     {

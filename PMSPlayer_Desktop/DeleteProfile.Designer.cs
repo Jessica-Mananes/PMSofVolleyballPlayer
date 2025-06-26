@@ -1,4 +1,4 @@
-﻿namespace VballPlayer_Desktop
+﻿namespace PMSPlayer_Desktop
 {
     partial class DeleteProfile
     {
@@ -28,87 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.DataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
-            this.SuspendLayout();
+            btnRefresh = new Button();
+            btnDelete = new Button();
+            btnBack = new Button();
+            DataGridView1 = new DataGridView();
+            Label3 = new Label();
+            ((System.ComponentModel.ISupportInitialize)DataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // btnRefresh
             // 
-            this.btnRefresh.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
-            this.btnRefresh.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(362, 539);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(143, 45);
-            this.btnRefresh.TabIndex = 38;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.AccessibleRole = AccessibleRole.Sound;
+            btnRefresh.BackColor = Color.CornflowerBlue;
+            btnRefresh.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefresh.Location = new Point(315, 595);
+            btnRefresh.Margin = new Padding(3, 4, 3, 4);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(143, 56);
+            btnRefresh.TabIndex = 38;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
-            this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
-            this.btnDelete.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(517, 539);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(143, 45);
-            this.btnDelete.TabIndex = 37;
-            this.btnDelete.Text = "Delete ";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.AccessibleRole = AccessibleRole.Sound;
+            btnDelete.BackColor = Color.CornflowerBlue;
+            btnDelete.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelete.Location = new Point(495, 595);
+            btnDelete.Margin = new Padding(3, 4, 3, 4);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(143, 56);
+            btnDelete.TabIndex = 37;
+            btnDelete.Text = "Delete ";
+            btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnBack
             // 
-            this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound;
-            this.btnBack.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Himalaya", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(42, 670);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(147, 45);
-            this.btnBack.TabIndex = 36;
-            this.btnBack.Text = "Previous";
-            this.btnBack.UseVisualStyleBackColor = false;
+            btnBack.AccessibleRole = AccessibleRole.Sound;
+            btnBack.BackColor = Color.CornflowerBlue;
+            btnBack.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(42, 838);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(147, 56);
+            btnBack.TabIndex = 36;
+            btnBack.Text = "Previous";
+            btnBack.UseVisualStyleBackColor = false;
             // 
             // DataGridView1
             // 
-            this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Location = new System.Drawing.Point(26, 168);
-            this.DataGridView1.Name = "DataGridView1";
-            this.DataGridView1.RowHeadersWidth = 51;
-            this.DataGridView1.Size = new System.Drawing.Size(658, 332);
-            this.DataGridView1.TabIndex = 35;
+            DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridView1.Location = new Point(26, 210);
+            DataGridView1.Margin = new Padding(3, 4, 3, 4);
+            DataGridView1.Name = "DataGridView1";
+            DataGridView1.RowHeadersWidth = 51;
+            DataGridView1.Size = new Size(634, 322);
+            DataGridView1.TabIndex = 35;
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Label3.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.ForeColor = System.Drawing.Color.Navy;
-            this.Label3.Location = new System.Drawing.Point(227, 76);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(256, 48);
-            this.Label3.TabIndex = 34;
-            this.Label3.Text = "DELETE PROFILE";
+            Label3.AutoSize = true;
+            Label3.BackColor = Color.CornflowerBlue;
+            Label3.Font = new Font("Impact", 28F);
+            Label3.ForeColor = Color.Navy;
+            Label3.Location = new Point(195, 81);
+            Label3.Name = "Label3";
+            Label3.Size = new Size(303, 59);
+            Label3.TabIndex = 34;
+            Label3.Text = "DELETE PROFILE";
             // 
             // DeleteProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
-            this.ClientSize = new System.Drawing.Size(696, 839);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.DataGridView1);
-            this.Controls.Add(this.Label3);
-            this.Name = "DeleteProfile";
-            this.Text = "DeleteProfile";
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
+            ClientSize = new Size(696, 1049);
+            Controls.Add(btnRefresh);
+            Controls.Add(btnDelete);
+            Controls.Add(btnBack);
+            Controls.Add(DataGridView1);
+            Controls.Add(Label3);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "DeleteProfile";
+            Text = "DeleteProfile";
+            ((System.ComponentModel.ISupportInitialize)DataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
