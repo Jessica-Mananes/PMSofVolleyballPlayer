@@ -13,12 +13,18 @@ namespace PMSPlayer_Desktop
         public EditProfile()
         {
             InitializeComponent();
+            PopulatePositions();
+            this.Load += EditProfile_Load;
         }
 
         private void EditProfile_Load(object sender, EventArgs e)
         {
             LoadPlayers();
+        }
 
+        private void PopulatePositions()
+        {
+            cmbPosition.Items.Clear(); 
             cmbPosition.Items.AddRange(new string[]
             {
                 "Setter", "Libero", "Opposite Hitter", "Blocker", "Middle Hitter", "Opposite Spiker", "Spiker"
@@ -27,13 +33,22 @@ namespace PMSPlayer_Desktop
 
         private void LoadPlayers()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                string query = "SELECT Name, Age, Position FROM Players";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                dgvData.DataSource = table;
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT Name, Age, Position FROM Players";
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        dgvData.DataSource = table;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Database error loading players: {ex.Message}");
             }
         }
 
@@ -42,8 +57,7 @@ namespace PMSPlayer_Desktop
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvData.Rows[e.RowIndex];
-
-                originalName = row.Cells["Name"].Value?.ToString(); 
+                originalName = row.Cells["Name"].Value?.ToString();
                 txbName.Text = originalName;
                 txbAge.Text = row.Cells["Age"].Value?.ToString();
                 cmbPosition.Text = row.Cells["Position"].Value?.ToString();
@@ -52,10 +66,47 @@ namespace PMSPlayer_Desktop
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (!ValidateInput()) return;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE Players SET Name = @NewName, Age = @Age, Position = @Position WHERE Name = @OriginalName";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@NewName", txbName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Age", int.Parse(txbAge.Text.Trim()));
+                    cmd.Parameters.AddWithValue("@Position", cmbPosition.Text.Trim());
+                    cmd.Parameters.AddWithValue("@OriginalName", originalName);
+
+                    try
+                    {
+                        conn.Open();
+                        int result = cmd.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Player updated successfully!");
+                            LoadPlayers();
+                            ClearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Update failed. Player not found or no changes made.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Database error: {ex.Message}");
+                    }
+                }
+            }
+        }
+
+        private bool ValidateInput()
+        {
             if (string.IsNullOrWhiteSpace(originalName))
             {
                 MessageBox.Show("Please select a player from the list first.");
-                return;
+                return false;
             }
 
             string newName = txbName.Text.Trim();
@@ -65,48 +116,16 @@ namespace PMSPlayer_Desktop
             if (string.IsNullOrWhiteSpace(newName) || string.IsNullOrWhiteSpace(ageText) || string.IsNullOrWhiteSpace(position))
             {
                 MessageBox.Show("Please fill in all fields.");
-                return;
+                return false;
             }
 
             if (!int.TryParse(ageText, out int age))
             {
                 MessageBox.Show("Age must be a valid number.");
-                return;
+                return false;
             }
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "UPDATE Players SET Name = @NewName, Age = @Age, Position = @Position WHERE Name = @OriginalName";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@NewName", newName);
-                    cmd.Parameters.AddWithValue("@Age", age);
-                    cmd.Parameters.AddWithValue("@Position", position);
-                    cmd.Parameters.AddWithValue("@OriginalName", originalName);
-
-                    try
-                    {
-                        conn.Open();
-                        int result = cmd.ExecuteNonQuery();
-
-                        if (result > 0)
-                        {
-                            MessageBox.Show("Player updated successfully!");
-                            LoadPlayers();
-                            ClearFields();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Update failed. Please ensure the player exists.");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Database error: " + ex.Message);
-                    }
-                }
-            }
+            return true;
         }
 
         private void ClearFields()
@@ -116,6 +135,7 @@ namespace PMSPlayer_Desktop
             cmbPosition.SelectedIndex = -1;
             originalName = "";
         }
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadPlayers();
@@ -124,7 +144,6 @@ namespace PMSPlayer_Desktop
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
             var home = new HomePage();
             home.Show();
             this.Close();

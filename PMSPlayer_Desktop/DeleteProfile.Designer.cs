@@ -31,9 +31,9 @@
             btnRefresh = new Button();
             btnDelete = new Button();
             btnBack = new Button();
-            DataGridView1 = new DataGridView();
+            dgvDeleteProfile = new DataGridView();
             Label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDeleteProfile).BeginInit();
             SuspendLayout();
             // 
             // btnRefresh
@@ -75,15 +75,15 @@
             btnBack.Text = "Previous";
             btnBack.UseVisualStyleBackColor = false;
             // 
-            // DataGridView1
+            // dgvDeleteProfile
             // 
-            DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridView1.Location = new Point(26, 210);
-            DataGridView1.Margin = new Padding(3, 4, 3, 4);
-            DataGridView1.Name = "DataGridView1";
-            DataGridView1.RowHeadersWidth = 51;
-            DataGridView1.Size = new Size(634, 322);
-            DataGridView1.TabIndex = 35;
+            dgvDeleteProfile.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDeleteProfile.Location = new Point(26, 210);
+            dgvDeleteProfile.Margin = new Padding(3, 4, 3, 4);
+            dgvDeleteProfile.Name = "dgvDeleteProfile";
+            dgvDeleteProfile.RowHeadersWidth = 51;
+            dgvDeleteProfile.Size = new Size(634, 322);
+            dgvDeleteProfile.TabIndex = 35;
             // 
             // Label3
             // 
@@ -101,17 +101,16 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            //BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
             ClientSize = new Size(696, 1049);
             Controls.Add(btnRefresh);
             Controls.Add(btnDelete);
             Controls.Add(btnBack);
-            Controls.Add(DataGridView1);
+            Controls.Add(dgvDeleteProfile);
             Controls.Add(Label3);
             Margin = new Padding(3, 4, 3, 4);
             Name = "DeleteProfile";
             Text = "DeleteProfile";
-            ((System.ComponentModel.ISupportInitialize)DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDeleteProfile).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -122,7 +121,7 @@
         internal System.Windows.Forms.Button btnRefresh;
         internal System.Windows.Forms.Button btnDelete;
         internal System.Windows.Forms.Button btnBack;
-        internal System.Windows.Forms.DataGridView DataGridView1;
+        internal System.Windows.Forms.DataGridView dgvDeleteProfile;
         internal System.Windows.Forms.Label Label3;
     }
 }

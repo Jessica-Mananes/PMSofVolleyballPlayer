@@ -30,10 +30,10 @@
         {
             btnBack = new Button();
             Label3 = new Label();
-            DataGridView1 = new DataGridView();
+            dgbViewProfile = new DataGridView();
             Label1 = new Label();
             btnRefresh = new Button();
-            ((System.ComponentModel.ISupportInitialize)DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgbViewProfile).BeginInit();
             SuspendLayout();
             // 
             // btnBack
@@ -48,6 +48,8 @@
             btnBack.TabIndex = 35;
             btnBack.Text = "Previous";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
+
             // 
             // Label3
             // 
@@ -61,15 +63,15 @@
             Label3.TabIndex = 34;
             Label3.Text = "VIEW PROFILE";
             // 
-            // DataGridView1
+            // dgbViewProfile
             // 
-            DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridView1.Location = new Point(50, 224);
-            DataGridView1.Margin = new Padding(3, 4, 3, 4);
-            DataGridView1.Name = "DataGridView1";
-            DataGridView1.RowHeadersWidth = 51;
-            DataGridView1.Size = new Size(614, 335);
-            DataGridView1.TabIndex = 33;
+            dgbViewProfile.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgbViewProfile.Location = new Point(50, 224);
+            dgbViewProfile.Margin = new Padding(3, 4, 3, 4);
+            dgbViewProfile.Name = "dgbViewProfile";
+            dgbViewProfile.RowHeadersWidth = 51;
+            dgbViewProfile.Size = new Size(614, 335);
+            dgbViewProfile.TabIndex = 33;
             // 
             // Label1
             // 
@@ -90,23 +92,23 @@
             btnRefresh.TabIndex = 36;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
+
             // 
             // ViewProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-           // BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
             ClientSize = new Size(696, 1049);
             Controls.Add(btnRefresh);
             Controls.Add(btnBack);
             Controls.Add(Label3);
-            Controls.Add(DataGridView1);
+            Controls.Add(dgbViewProfile);
             Controls.Add(Label1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "ViewProfile";
             Text = "ViewProfile";
             Load += ViewProfile_Load;
-            ((System.ComponentModel.ISupportInitialize)DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgbViewProfile).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -116,7 +118,7 @@
 
         internal System.Windows.Forms.Button btnBack;
         internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.DataGridView DataGridView1;
+        internal System.Windows.Forms.DataGridView dgbViewProfile;
         internal System.Windows.Forms.Label Label1;
         internal Button btnRefresh;
     }
