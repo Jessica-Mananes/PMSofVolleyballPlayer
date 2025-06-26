@@ -47,7 +47,7 @@
             btnBack.AccessibleRole = AccessibleRole.Sound;
             btnBack.BackColor = Color.CornflowerBlue;
             btnBack.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(262, 403);
+            btnBack.Location = new Point(174, 405);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(154, 46);
@@ -60,11 +60,11 @@
             // 
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.GridColor = SystemColors.HotTrack;
-            dgvData.Location = new Point(96, 472);
+            dgvData.Location = new Point(150, 471);
             dgvData.Margin = new Padding(3, 4, 3, 4);
             dgvData.Name = "dgvData";
             dgvData.RowHeadersWidth = 51;
-            dgvData.Size = new Size(483, 284);
+            dgvData.Size = new Size(419, 285);
             dgvData.TabIndex = 43;
             dgvData.CellClick += dgvData_CellClick;
             // 
@@ -72,10 +72,10 @@
             // 
             btnSave.BackColor = Color.CornflowerBlue;
             btnSave.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(441, 403);
+            btnSave.Location = new Point(491, 406);
             btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(154, 45);
+            btnSave.Size = new Size(139, 45);
             btnSave.TabIndex = 38;
             btnSave.Text = "Save Profile\r\n\r\n";
             btnSave.UseVisualStyleBackColor = false;
@@ -163,10 +163,10 @@
             // 
             btnRefresh.BackColor = Color.CornflowerBlue;
             btnRefresh.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(96, 404);
+            btnRefresh.Location = new Point(334, 405);
             btnRefresh.Margin = new Padding(3, 4, 3, 4);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(139, 44);
+            btnRefresh.Size = new Size(145, 46);
             btnRefresh.TabIndex = 45;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;

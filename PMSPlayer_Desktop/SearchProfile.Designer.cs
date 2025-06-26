@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnRefresh = new Button();
-            btnPrevious = new Button();
+            btnBack = new Button();
             dgvSearch = new DataGridView();
             txbSearchArea = new TextBox();
             btnSearch = new Button();
@@ -40,40 +40,49 @@
             // 
             btnRefresh.BackColor = Color.CornflowerBlue;
             btnRefresh.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(341, 581);
+            btnRefresh.Location = new Point(522, 320);
             btnRefresh.Margin = new Padding(3, 4, 3, 4);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(175, 65);
+            btnRefresh.Size = new Size(148, 57);
             btnRefresh.TabIndex = 9;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+
+
             // 
-            // btnPrevious
+            // btnBack
             // 
-            btnPrevious.BackColor = Color.CornflowerBlue;
-            btnPrevious.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPrevious.Location = new Point(146, 583);
-            btnPrevious.Margin = new Padding(3, 4, 3, 4);
-            btnPrevious.Name = "btnPrevious";
-            btnPrevious.Size = new Size(175, 61);
-            btnPrevious.TabIndex = 8;
-            btnPrevious.Text = "Previous";
-            btnPrevious.UseVisualStyleBackColor = false;
+            btnBack.BackColor = Color.CornflowerBlue;
+            btnBack.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(522, 414);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(148, 54);
+            btnBack.TabIndex = 8;
+            btnBack.Text = "Previous";
+            btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnPrevious_Click);
+
+
+
+
             // 
             // dgvSearch
             // 
             dgvSearch.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSearch.Location = new Point(35, 237);
+            dgvSearch.Location = new Point(64, 208);
             dgvSearch.Margin = new Padding(3, 4, 3, 4);
             dgvSearch.Name = "dgvSearch";
             dgvSearch.RowHeadersWidth = 51;
-            dgvSearch.Size = new Size(655, 296);
+            dgvSearch.Size = new Size(432, 340);
             dgvSearch.TabIndex = 7;
             // 
             // txbSearchArea
             // 
             txbSearchArea.Font = new Font("Microsoft Himalaya", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbSearchArea.Location = new Point(78, 114);
+            txbSearchArea.Location = new Point(64, 114);
             txbSearchArea.Margin = new Padding(3, 4, 3, 4);
             txbSearchArea.Name = "txbSearchArea";
             txbSearchArea.Size = new Size(418, 47);
@@ -95,10 +104,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-           // BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
-            ClientSize = new Size(725, 1049);
+            ClientSize = new Size(725, 761);
             Controls.Add(btnRefresh);
-            Controls.Add(btnPrevious);
+            Controls.Add(btnBack);
             Controls.Add(dgvSearch);
             Controls.Add(txbSearchArea);
             Controls.Add(btnSearch);
@@ -109,12 +117,14 @@
             ResumeLayout(false);
             PerformLayout();
 
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+
         }
 
         #endregion
 
         internal System.Windows.Forms.Button btnRefresh;
-        internal System.Windows.Forms.Button btnPrevious;
+        internal System.Windows.Forms.Button btnBack;
         internal System.Windows.Forms.DataGridView dgvSearch;
         internal System.Windows.Forms.TextBox txbSearchArea;
         internal System.Windows.Forms.Button btnSearch;

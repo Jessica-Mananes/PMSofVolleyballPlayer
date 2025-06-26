@@ -41,15 +41,14 @@
             btnBack.AccessibleRole = AccessibleRole.Sound;
             btnBack.BackColor = Color.CornflowerBlue;
             btnBack.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(63, 844);
+            btnBack.Location = new Point(194, 614);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(147, 56);
+            btnBack.Size = new Size(151, 48);
             btnBack.TabIndex = 35;
             btnBack.Text = "Previous";
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
-
             // 
             // Label3
             // 
@@ -66,11 +65,11 @@
             // dgbViewProfile
             // 
             dgbViewProfile.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgbViewProfile.Location = new Point(50, 224);
+            dgbViewProfile.Location = new Point(141, 189);
             dgbViewProfile.Margin = new Padding(3, 4, 3, 4);
             dgbViewProfile.Name = "dgbViewProfile";
             dgbViewProfile.RowHeadersWidth = 51;
-            dgbViewProfile.Size = new Size(614, 335);
+            dgbViewProfile.Size = new Size(428, 356);
             dgbViewProfile.TabIndex = 33;
             // 
             // Label1
@@ -85,20 +84,19 @@
             // 
             btnRefresh.BackColor = Color.CornflowerBlue;
             btnRefresh.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(489, 606);
+            btnRefresh.Location = new Point(365, 614);
             btnRefresh.Margin = new Padding(3, 4, 3, 4);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(136, 48);
+            btnRefresh.Size = new Size(151, 48);
             btnRefresh.TabIndex = 36;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
-
             // 
             // ViewProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(696, 1049);
+            ClientSize = new Size(695, 761);
             Controls.Add(btnRefresh);
             Controls.Add(btnBack);
             Controls.Add(Label3);

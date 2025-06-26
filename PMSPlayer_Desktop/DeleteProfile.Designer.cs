@@ -41,49 +41,53 @@
             btnRefresh.AccessibleRole = AccessibleRole.Sound;
             btnRefresh.BackColor = Color.CornflowerBlue;
             btnRefresh.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(315, 595);
+            btnRefresh.Location = new Point(250, 566);
             btnRefresh.Margin = new Padding(3, 4, 3, 4);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(143, 56);
             btnRefresh.TabIndex = 38;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnDelete
             // 
             btnDelete.AccessibleRole = AccessibleRole.Sound;
             btnDelete.BackColor = Color.CornflowerBlue;
             btnDelete.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDelete.Location = new Point(495, 595);
+            btnDelete.Location = new Point(433, 566);
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(143, 56);
             btnDelete.TabIndex = 37;
             btnDelete.Text = "Delete ";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnBack
             // 
             btnBack.AccessibleRole = AccessibleRole.Sound;
             btnBack.BackColor = Color.CornflowerBlue;
             btnBack.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(42, 838);
+            btnBack.Location = new Point(68, 566);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(147, 56);
             btnBack.TabIndex = 36;
             btnBack.Text = "Previous";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // dgvDeleteProfile
             // 
             dgvDeleteProfile.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDeleteProfile.Location = new Point(26, 210);
+            dgvDeleteProfile.Location = new Point(118, 194);
             dgvDeleteProfile.Margin = new Padding(3, 4, 3, 4);
             dgvDeleteProfile.Name = "dgvDeleteProfile";
             dgvDeleteProfile.RowHeadersWidth = 51;
-            dgvDeleteProfile.Size = new Size(634, 322);
+            dgvDeleteProfile.Size = new Size(444, 322);
             dgvDeleteProfile.TabIndex = 35;
+            dgvDeleteProfile.CellClick += dgvDeleteProfile_CellClick;
             // 
             // Label3
             // 
@@ -101,7 +105,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(696, 1049);
+            ClientSize = new Size(696, 761);
             Controls.Add(btnRefresh);
             Controls.Add(btnDelete);
             Controls.Add(btnBack);
@@ -113,6 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvDeleteProfile).EndInit();
             ResumeLayout(false);
             PerformLayout();
+
 
         }
 

@@ -74,7 +74,7 @@
             cmbPosition.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPosition.Font = new Font("Mongolian Baiti", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbPosition.FormattingEnabled = true;
-            cmbPosition.Items.AddRange(new object[] { "Libero", "Setter", "Blocker", "Opposite Spiker", "Opposite Hitter", "Middle Hitter" });
+            cmbPosition.Items.AddRange(new object[] { "Libero", "Setter", "Blocker", "Opposite Spiker", "Opposite Hitter", "Middle Hitter", "Spiker" });
             cmbPosition.Location = new Point(240, 398);
             cmbPosition.Margin = new Padding(3, 4, 3, 4);
             cmbPosition.Name = "cmbPosition";
@@ -122,7 +122,7 @@
             btnBack.AccessibleRole = AccessibleRole.Sound;
             btnBack.BackColor = Color.CornflowerBlue;
             btnBack.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(77, 559);
+            btnBack.Location = new Point(264, 474);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(147, 56);
@@ -135,19 +135,20 @@
             // 
             btnAdd.BackColor = Color.CornflowerBlue;
             btnAdd.Font = new Font("Microsoft Himalaya", 25.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdd.Location = new Point(426, 487);
+            btnAdd.Location = new Point(426, 474);
             btnAdd.Margin = new Padding(3, 4, 3, 4);
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            btnAdd.Size = new Size(177, 43);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(177, 56);
             btnAdd.TabIndex = 22;
             btnAdd.Text = "Add Player";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // CreateProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(696, 1049);
+            ClientSize = new Size(696, 761);
             Controls.Add(btnBack);
             Controls.Add(btnAdd);
             Controls.Add(Label3);
