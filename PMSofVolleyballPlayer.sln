@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VballAPI", "VballAPI\VballA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vball_BusinessDataLogic", "Vball_BusinessDataLogic\Vball_BusinessDataLogic.csproj", "{9554CDC6-B045-7F85-38ED-529E36451275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VballPlayer_Desktop", "VballPlayer_Desktop\VballPlayer_Desktop.csproj", "{7945C6AD-FF06-4EA7-BFB4-61F6D41142FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VbPMS_Desktop", "VbPMS_Desktop\VbPMS_Desktop.csproj", "{7945C6AD-FF06-4EA7-BFB4-61F6D41142FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

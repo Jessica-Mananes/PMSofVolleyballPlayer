@@ -137,5 +137,19 @@
   <ItemGroup>
     <None Include="bgLogin.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlayerCommon\PlayerCommon.csproj">
+      <Project>{796dffd5-9f30-4ee7-a4ca-9235c167e78a}</Project>
+      <Name>PlayerCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSDataPlayer\PMSDataPlayer.csproj">
+      <Project>{8fe9bb0c-5228-492f-9721-628782626cc9}</Project>
+      <Name>PMSDataPlayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vball_BusinessDataLogic\Vball_BusinessDataLogic.csproj">
+      <Project>{9554cdc6-b045-7f85-38ed-529e36451275}</Project>
+      <Name>Vball_BusinessDataLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,6 +11,7 @@
     <Compile Remove="DataLogic\**" />
     <Compile Remove="PlayerCommon\**" />
     <Compile Remove="PlayerData\**" />
+    <Compile Remove="Player_Desktop\**" />
     <Compile Remove="PMSCommon\**" />
     <Compile Remove="PMSDataPlayer\**" />
     <Compile Remove="VballAPI\**" />
@@ -18,9 +19,11 @@
     <Compile Remove="Vball_API\**" />
     <Compile Remove="Vball_BusinessDataLogic\**" />
     <Compile Remove="Vball_Desktop\**" />
+    <Compile Remove="VbPMS_Desktop\**" />
     <EmbeddedResource Remove="DataLogic\**" />
     <EmbeddedResource Remove="PlayerCommon\**" />
     <EmbeddedResource Remove="PlayerData\**" />
+    <EmbeddedResource Remove="Player_Desktop\**" />
     <EmbeddedResource Remove="PMSCommon\**" />
     <EmbeddedResource Remove="PMSDataPlayer\**" />
     <EmbeddedResource Remove="VballAPI\**" />
@@ -28,9 +31,11 @@
     <EmbeddedResource Remove="Vball_API\**" />
     <EmbeddedResource Remove="Vball_BusinessDataLogic\**" />
     <EmbeddedResource Remove="Vball_Desktop\**" />
+    <EmbeddedResource Remove="VbPMS_Desktop\**" />
     <None Remove="DataLogic\**" />
     <None Remove="PlayerCommon\**" />
     <None Remove="PlayerData\**" />
+    <None Remove="Player_Desktop\**" />
     <None Remove="PMSCommon\**" />
     <None Remove="PMSDataPlayer\**" />
     <None Remove="VballAPI\**" />
@@ -38,6 +43,7 @@
     <None Remove="Vball_API\**" />
     <None Remove="Vball_BusinessDataLogic\**" />
     <None Remove="Vball_Desktop\**" />
+    <None Remove="VbPMS_Desktop\**" />
   </ItemGroup>
 
   <ItemGroup>
