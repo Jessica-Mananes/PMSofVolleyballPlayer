@@ -1,4 +1,4 @@
-﻿namespace VballPlayer_Desktop
+﻿namespace PMSPlayer_Desktop
 {
     partial class HomePage
     {
@@ -28,92 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            btnSearch = new Button();
+            btnDelete = new Button();
+            btnEdit = new Button();
+            btnView = new Button();
+            btnCreate = new Button();
+            SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(201, 590);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(303, 55);
-            this.btnSearch.TabIndex = 9;
-            this.btnSearch.Text = "Search Profile";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.BackColor = Color.CornflowerBlue;
+            btnSearch.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSearch.ForeColor = Color.Black;
+            btnSearch.Location = new Point(201, 621);
+            btnSearch.Margin = new Padding(4, 5, 4, 5);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(303, 69);
+            btnSearch.TabIndex = 9;
+            btnSearch.Text = "Search Profile";
+            btnSearch.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(201, 462);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(303, 59);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Delete Profile";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.BackColor = Color.CornflowerBlue;
+            btnDelete.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelete.ForeColor = Color.Black;
+            btnDelete.Location = new Point(201, 491);
+            btnDelete.Margin = new Padding(4, 5, 4, 5);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(303, 74);
+            btnDelete.TabIndex = 8;
+            btnDelete.Text = "Delete Profile";
+            btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(201, 218);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(303, 61);
-            this.btnEdit.TabIndex = 7;
-            this.btnEdit.Text = "Edit Profile";
-            this.btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.BackColor = Color.CornflowerBlue;
+            btnEdit.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEdit.ForeColor = Color.Black;
+            btnEdit.Location = new Point(201, 200);
+            btnEdit.Margin = new Padding(4, 5, 4, 5);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(303, 76);
+            btnEdit.TabIndex = 7;
+            btnEdit.Text = "Edit Profile";
+            btnEdit.UseVisualStyleBackColor = false;
             // 
             // btnView
             // 
-            this.btnView.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnView.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.ForeColor = System.Drawing.Color.Black;
-            this.btnView.Location = new System.Drawing.Point(201, 339);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(303, 60);
-            this.btnView.TabIndex = 6;
-            this.btnView.Text = "View Profile";
-            this.btnView.UseVisualStyleBackColor = false;
+            btnView.BackColor = Color.CornflowerBlue;
+            btnView.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnView.ForeColor = Color.Black;
+            btnView.Location = new Point(201, 343);
+            btnView.Margin = new Padding(4, 5, 4, 5);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(303, 75);
+            btnView.TabIndex = 6;
+            btnView.Text = "View Profile";
+            btnView.UseVisualStyleBackColor = false;
             // 
             // btnCreate
             // 
-            this.btnCreate.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Himalaya", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(201, 97);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(303, 58);
-            this.btnCreate.TabIndex = 5;
-            this.btnCreate.Text = "Create Profile";
-            this.btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.BackColor = Color.CornflowerBlue;
+            btnCreate.Font = new Font("Microsoft Himalaya", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCreate.ForeColor = Color.Black;
+            btnCreate.Location = new Point(201, 66);
+            btnCreate.Margin = new Padding(4, 5, 4, 5);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(303, 72);
+            btnCreate.TabIndex = 5;
+            btnCreate.Text = "Create Profile";
+            btnCreate.UseVisualStyleBackColor = false;
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VballPlayer_Desktop.Properties.Resources.bgLogin;
-            this.ClientSize = new System.Drawing.Size(696, 839);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnView);
-            this.Controls.Add(this.btnCreate);
-            this.Name = "HomePage";
-            this.Text = "HomePage";
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = PMSPlayer_Desktop.Properties.Resources.bgLogin;
+            ClientSize = new Size(696, 1049);
+            Controls.Add(btnSearch);
+            Controls.Add(btnDelete);
+            Controls.Add(btnEdit);
+            Controls.Add(btnView);
+            Controls.Add(btnCreate);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "HomePage";
+            Text = "HomePage";
+            ResumeLayout(false);
 
         }
 
