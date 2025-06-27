@@ -110,7 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightCoral;
+            BackColor = Color.MediumTurquoise;
             ClientSize = new Size(696, 731);
             Controls.Add(btnLogin);
             Controls.Add(tbxPassword);
