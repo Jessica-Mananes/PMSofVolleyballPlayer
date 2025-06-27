@@ -95,11 +95,11 @@
             // lblSystemName
             // 
             lblSystemName.AutoSize = true;
-            lblSystemName.BackColor = Color.CornflowerBlue;
+            lblSystemName.BackColor = Color.Transparent;
             lblSystemName.Font = new Font("Britannic Bold", 28.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblSystemName.ForeColor = Color.Navy;
+            lblSystemName.ForeColor = Color.Indigo;
             lblSystemName.ImageAlign = ContentAlignment.BottomCenter;
-            lblSystemName.Location = new Point(53, 139);
+            lblSystemName.Location = new Point(43, 125);
             lblSystemName.Margin = new Padding(4, 0, 4, 0);
             lblSystemName.Name = "lblSystemName";
             lblSystemName.Size = new Size(611, 104);
@@ -110,7 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            //BackgroundImage = Properties.Resources.bgLogin;
+            BackColor = Color.LightCoral;
             ClientSize = new Size(696, 731);
             Controls.Add(btnLogin);
             Controls.Add(tbxPassword);
