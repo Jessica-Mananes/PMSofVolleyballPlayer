@@ -48,9 +48,6 @@
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
             btnRefresh.Click += btnRefresh_Click;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-
-
             // 
             // btnBack
             // 
@@ -63,11 +60,7 @@
             btnBack.TabIndex = 8;
             btnBack.Text = "Previous";
             btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnPrevious_Click);
-
-
-
-
+            btnBack.Click += btnPrevious_Click;
             // 
             // dgvSearch
             // 
@@ -99,11 +92,13 @@
             btnSearch.TabIndex = 5;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // SearchProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkTurquoise;
             ClientSize = new Size(725, 761);
             Controls.Add(btnRefresh);
             Controls.Add(btnBack);
@@ -116,8 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvSearch).EndInit();
             ResumeLayout(false);
             PerformLayout();
-
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
 
         }
 
