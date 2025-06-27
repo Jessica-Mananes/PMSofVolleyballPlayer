@@ -53,7 +53,7 @@
             // Label3
             // 
             Label3.AutoSize = true;
-            Label3.BackColor = Color.CornflowerBlue;
+            Label3.BackColor = Color.White;
             Label3.Font = new Font("Impact", 28F);
             Label3.ForeColor = Color.Navy;
             Label3.Location = new Point(220, 76);
@@ -96,6 +96,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkTurquoise;
             ClientSize = new Size(695, 761);
             Controls.Add(btnRefresh);
             Controls.Add(btnBack);
