@@ -55,6 +55,7 @@
             // 
             // tbxPassword
             // 
+            tbxPassword.BorderStyle = BorderStyle.FixedSingle;
             tbxPassword.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbxPassword.Location = new Point(301, 451);
             tbxPassword.Margin = new Padding(3, 4, 3, 4);
@@ -64,6 +65,7 @@
             // 
             // tbxUsername
             // 
+            tbxUsername.BorderStyle = BorderStyle.FixedSingle;
             tbxUsername.Cursor = Cursors.IBeam;
             tbxUsername.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbxUsername.Location = new Point(301, 381);
