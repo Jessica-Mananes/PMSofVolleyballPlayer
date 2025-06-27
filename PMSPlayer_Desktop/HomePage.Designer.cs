@@ -109,6 +109,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkTurquoise;
             ClientSize = new Size(696, 732);
             Controls.Add(btnSearch);
             Controls.Add(btnDelete);

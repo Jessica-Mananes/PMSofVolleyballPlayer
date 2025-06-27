@@ -76,6 +76,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPassword.ForeColor = Color.Navy;
             lblPassword.Location = new Point(135, 451);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(134, 35);
@@ -86,6 +87,7 @@
             // 
             lblUserName.AutoSize = true;
             lblUserName.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUserName.ForeColor = Color.Navy;
             lblUserName.Location = new Point(135, 381);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(138, 35);
@@ -95,9 +97,9 @@
             // lblSystemName
             // 
             lblSystemName.AutoSize = true;
-            lblSystemName.BackColor = Color.Transparent;
+            lblSystemName.BackColor = Color.White;
             lblSystemName.Font = new Font("Britannic Bold", 28.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblSystemName.ForeColor = Color.Indigo;
+            lblSystemName.ForeColor = Color.Navy;
             lblSystemName.ImageAlign = ContentAlignment.BottomCenter;
             lblSystemName.Location = new Point(43, 125);
             lblSystemName.Margin = new Padding(4, 0, 4, 0);
@@ -110,7 +112,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MediumTurquoise;
+            BackColor = Color.DarkTurquoise;
             ClientSize = new Size(696, 731);
             Controls.Add(btnLogin);
             Controls.Add(tbxPassword);
@@ -121,6 +123,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
 

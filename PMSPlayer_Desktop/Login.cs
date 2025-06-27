@@ -12,7 +12,7 @@ namespace PMSPlayer_Desktop
 {
     public partial class Login : Form
     {
-        
+
         private string txbUsername = "batakmagvball";
         private string txbPassword = "jess";
 
@@ -47,6 +47,11 @@ namespace PMSPlayer_Desktop
 
         private void lblSystemName_Click(object sender, EventArgs e)
         {
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
