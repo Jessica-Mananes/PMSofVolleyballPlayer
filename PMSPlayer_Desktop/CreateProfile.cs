@@ -1,19 +1,21 @@
-﻿using System;
-using System.Data;
+﻿using Microsoft.Data.SqlClient;
+using PlayerCommon;
+using PMSDataPlayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
 
 namespace PMSPlayer_Desktop
 {
     public partial class CreateProfile : Form
     {
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=VballPlayerPMSDatabase;Integrated Security=True;Encrypt=False";
+        private readonly PlayerData playerData = new PlayerData();
 
         public CreateProfile()
         {
@@ -48,36 +50,25 @@ namespace PMSPlayer_Desktop
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            var newPlayer = new Player
             {
-                string query = "INSERT INTO Players (Name, Age, Position) VALUES (@Name, @Age, @Position)";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                Name = playerName,
+                Age = age,
+                Position = position
+            };
 
-                cmd.Parameters.AddWithValue("@Name", playerName);
-                cmd.Parameters.AddWithValue("@Age", age);
-                cmd.Parameters.AddWithValue("@Position", position);
+            bool success = playerData.AddPlayer(newPlayer);
 
-                try
-                {
-                    conn.Open();
-                    int result = cmd.ExecuteNonQuery();
-                    if (result > 0)
-                    {
-                        MessageBox.Show("Player added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to add player.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            if (success)
+            {
+                MessageBox.Show("Player added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields();
+            }
+            else
+            {
+                MessageBox.Show("Failed to add player.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void ClearFields()
         {
             txbName.Clear();

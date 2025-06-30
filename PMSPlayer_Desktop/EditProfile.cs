@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using PlayerCommon;
+using PMSDataPlayer;
 
 namespace PMSPlayer_Desktop
 {
     public partial class EditProfile : Form
     {
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=VballPlayerPMSDatabase;Integrated Security=True;Encrypt=False";
+        private readonly PlayerData playerData = new PlayerData();
         private string originalName = "";
 
         public EditProfile()
@@ -41,22 +43,15 @@ namespace PMSPlayer_Desktop
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    string query = "SELECT Name, Age, Position FROM Players";
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
-                    {
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-                        dgvData.DataSource = table;
-                    }
-                }
+                var players = playerData.GetAllPlayers();
+                dgvData.DataSource = players;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Database error loading players: {ex.Message}");
+                MessageBox.Show($"Error loading players: {ex.Message}");
             }
         }
+
 
         private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -74,38 +69,26 @@ namespace PMSPlayer_Desktop
         {
             if (!ValidateInput()) return;
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            Player updatedPlayer = new Player
             {
-                string query = "UPDATE Players SET Name = @NewName, Age = @Age, Position = @Position WHERE Name = @OriginalName";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@NewName", txbName.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Age", int.Parse(txbAge.Text.Trim()));
-                    cmd.Parameters.AddWithValue("@Position", cmbPosition.Text.Trim());
-                    cmd.Parameters.AddWithValue("@OriginalName", originalName);
+                Name = txbName.Text.Trim(),
+                Age = int.Parse(txbAge.Text.Trim()),
+                Position = cmbPosition.Text.Trim()
+            };
 
-                    try
-                    {
-                        conn.Open();
-                        int result = cmd.ExecuteNonQuery();
-                        if (result > 0)
-                        {
-                            MessageBox.Show("Player updated successfully!");
-                            LoadPlayers();
-                            ClearFields();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Update failed. Player not found or no changes made.");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Database error: {ex.Message}");
-                    }
-                }
+            bool success = playerData.UpdatePlayer(originalName, updatedPlayer);
+            if (success)
+            {
+                MessageBox.Show("Player updated successfully!");
+                LoadPlayers();
+                ClearFields();
+            }
+            else
+            {
+                MessageBox.Show("Update failed. Player not found or no changes made.");
             }
         }
+
 
         private bool ValidateInput()
         {

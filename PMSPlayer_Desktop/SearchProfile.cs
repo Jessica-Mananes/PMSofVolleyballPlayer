@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using PMSDataPlayer;
+using PlayerCommon;
 
 namespace PMSPlayer_Desktop
 {
     public partial class SearchProfile : Form
     {
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=VballPlayerPMSDatabase;Integrated Security=True;Encrypt=False";
+        private readonly PlayerData playerData = new PlayerData();
 
         public SearchProfile()
         {
@@ -28,24 +30,28 @@ namespace PMSPlayer_Desktop
 
         private void LoadPlayers(string searchTerm = "")
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                string query = "SELECT Name, Age, Position FROM Players WHERE Name LIKE @searchTerm";
+                List<Player> players;
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                if (string.IsNullOrWhiteSpace(searchTerm))
                 {
-                    cmd.Parameters.AddWithValue("@searchTerm", $"%{searchTerm}%");
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-                    dgvSearch.DataSource = table;
-
-                    if (searchTerm != "" && table.Rows.Count == 0)
+                    players = playerData.GetAllPlayers();
+                }
+                else
+                {
+                    players = playerData.SearchPlayersByName(searchTerm);
+                    if (players.Count == 0)
                     {
                         MessageBox.Show("No player found with the given name.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+
+                dgvSearch.DataSource = players;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading players: {ex.Message}");
             }
         }
 

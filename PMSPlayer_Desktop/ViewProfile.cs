@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using PMSDataPlayer;
+using PlayerCommon;
 
 namespace PMSPlayer_Desktop
 {
     public partial class ViewProfile : Form
     {
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=VballPlayerPMSDatabase;Integrated Security=True;Encrypt=False";
+        private readonly PlayerData playerData = new PlayerData();
 
         public ViewProfile()
         {
@@ -30,21 +32,15 @@ namespace PMSPlayer_Desktop
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT Name, Age, Position FROM Players";
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-                    dgbViewProfile.DataSource= table;
-                }
+                List<Player> players = playerData.GetAllPlayers();
+                dgbViewProfile.DataSource = players;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }
+
 
         private void btnBack_Click(object sender, EventArgs e)
         {

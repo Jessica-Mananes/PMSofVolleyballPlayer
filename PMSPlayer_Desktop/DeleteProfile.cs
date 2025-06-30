@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using PlayerCommon;
+using PMSDataPlayer;
 
 namespace PMSPlayer_Desktop
 {
     public partial class DeleteProfile : Form
     {
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=VballPlayerPMSDatabase;Integrated Security=True;Encrypt=False";
+        private readonly PlayerData playerData = new PlayerData();
         private string selectedPlayerName = "";
 
         public DeleteProfile()
@@ -31,22 +33,15 @@ namespace PMSPlayer_Desktop
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    string query = "SELECT Name, Age, Position FROM Players";
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
-                    {
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-                        dgvDeleteProfile.DataSource = table;
-                    }
-                }
+                var players = playerData.GetAllPlayers();
+                dgvDeleteProfile.DataSource = players;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Database error loading players: {ex.Message}");
+                MessageBox.Show($"Error loading players: {ex.Message}");
             }
         }
+
 
         private void dgvDeleteProfile_CellClick(object sender, DataGridViewCellEventArgs e) 
         {
@@ -72,28 +67,20 @@ namespace PMSPlayer_Desktop
 
             if (confirm == DialogResult.Yes)
             {
-                try
+                bool success = playerData.DeletePlayer(selectedPlayerName);
+                if (success)
                 {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
-                    {
-                        conn.Open();
-                        string query = "DELETE FROM Players WHERE Name = @name"; 
-                        using (SqlCommand cmd = new SqlCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@name", selectedPlayerName);
-                            cmd.ExecuteNonQuery();
-                            MessageBox.Show("Player deleted successfully!");
-                            LoadPlayers();
-                            selectedPlayerName = "";
-                        }
-                    }
+                    MessageBox.Show("Player deleted successfully!");
+                    LoadPlayers();
+                    selectedPlayerName = "";
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show($"Database error deleting player: {ex.Message}");
+                    MessageBox.Show("Failed to delete player. Please try again.");
                 }
             }
         }
+
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
