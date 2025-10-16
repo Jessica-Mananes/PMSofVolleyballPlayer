@@ -2,14 +2,10 @@
 using PlayerCommon;
 using PMSDataPlayer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Numerics;
 using System.Windows.Forms;
+using VballPlayerService;
+
 
 namespace PMSPlayer_Desktop
 {
@@ -62,6 +58,18 @@ namespace PMSPlayer_Desktop
             if (success)
             {
                 MessageBox.Show("Player added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                try
+                {
+                    var emailService = new EmailService();
+                    emailService.SendEmail(playerName, age.ToString(), position);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Player added, but email failed to send: " + ex.Message,
+                        "Email Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
                 ClearFields();
             }
             else
@@ -69,6 +77,7 @@ namespace PMSPlayer_Desktop
                 MessageBox.Show("Failed to add player.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void ClearFields()
         {
             txbName.Clear();
