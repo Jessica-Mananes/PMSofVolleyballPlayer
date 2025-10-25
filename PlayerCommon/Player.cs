@@ -12,6 +12,8 @@ namespace PlayerCommon
         public int Age { get; set; }
         public string Position { get; set; }
 
+        public string Email { get; set; }
+
         public Player() { }
 
 

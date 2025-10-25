@@ -1,5 +1,6 @@
-using VballPMS;
+using PMSDataPlayer;
 using Vball_BusinessDataLogic.Services;
+using VballPMS;
 
 
 
@@ -14,6 +15,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<EmailService>();
 builder.Services.AddScoped<PlayerService>();
+builder.Services.AddScoped<IPlayerDataSource, DBDataPlayer>();
+
 
 var app = builder.Build();
 

@@ -14,39 +14,44 @@ namespace VballAPI.Controllers
           private static readonly DBDataPlayer dataSource = new DBDataPlayer();
         // private static readonly JsonFilePlayerData dataSource = new JsonFilePlayerData();
         //private static readonly TextFilePlayerData dataSource = new TextFilePlayerData();
+        private readonly PlayerService _playerService;
+
+        public VBPlayersController(PlayerService playerService)
+        {
+            _playerService = playerService;
+        }
 
 
-        private static readonly PlayerService playerService = new PlayerService(dataSource);
 
 
         [HttpGet]
         public IEnumerable<Player> GetAllPlayers()
         {
-            return playerService.GetAllPlayers();
+            return _playerService.GetAllPlayers();
         }
 
         [HttpPost]
         public bool AddPlayer([FromBody] Player player)
         {
-            return playerService.AddPlayer(player);
+            return _playerService.AddPlayer(player);
         }
 
         [HttpPatch("update")]
         public bool UpdatePlayer(string name, [FromBody] Player updatedPlayer)
         {
-            return playerService.UpdatePlayer(name, updatedPlayer);
+            return _playerService.UpdatePlayer(name, updatedPlayer);
         }
 
         [HttpDelete]
-        public bool DeletePlayer(string name)
+        public bool DeletePlayer(string  name)
         {
-            return playerService.DeletePlayer(name);
+            return _playerService.DeletePlayer(name);
         }
 
         [HttpGet("search")]
         public IEnumerable<Player> SearchPlayersByName(string keyword)
         {
-            return playerService.SearchPlayersByName(keyword);
+            return _playerService.SearchPlayersByName(keyword);
         }
     }
 }
