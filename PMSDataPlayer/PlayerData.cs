@@ -10,9 +10,9 @@ namespace PMSDataPlayer
         public PlayerData()
         {
            // _dataSource = new InMemoryPlayerData();
-            _dataSource = new JsonFilePlayerData();
+          //  _dataSource = new JsonFilePlayerData();
           //  _dataSource = new TextFilePlayerData();
-          // _dataSource = new DBDataPlayer(); 
+           _dataSource = new DBDataPlayer(); 
         }
 
         public bool AddPlayer(Player player) => _dataSource.AddPlayer(player);
