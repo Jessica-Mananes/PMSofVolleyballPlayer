@@ -1,28 +1,46 @@
-﻿using System.Collections.Generic;
-using PlayerCommon;
+﻿using PlayerCommon;
 using PMSDataPlayer;
+using System.Collections.Generic;
+using Vball_BusinessDataLogic.Services;
 
 namespace VballPMS
 {
     public class PlayerService
     {
         private readonly IPlayerDataSource _data;
+        private readonly EmailService _emailService;
 
-        public PlayerService(IPlayerDataSource data)
+        public PlayerService(IPlayerDataSource data, EmailService emailService)
         {
             _data = data;
+            _emailService = emailService;
         }
 
         public bool AddPlayer(Player player)
         {
-            return _data.AddPlayer(player);
+            bool result = _data.AddPlayer(player);
+
+            if (result)
+            {
+                _emailService.SendEmail(player.Name, player.Email);
+            }
+
+            return result;
         }
 
         public bool UpdatePlayer(string originalName, Player updatedPlayer)
         {
             var existingPlayer = _data.GetPlayerByName(originalName);
             if (existingPlayer == null) return false;
-            return _data.UpdatePlayer(originalName, updatedPlayer);
+
+            bool result = _data.UpdatePlayer(originalName, updatedPlayer);
+
+            if (result)
+            {
+                _emailService.SendEmail(updatedPlayer.Name, updatedPlayer.Email);
+            }
+
+            return result;
         }
 
         public bool DeletePlayer(string name)
@@ -44,6 +62,7 @@ namespace VballPMS
         {
             return _data.SearchPlayersByName(searchTerm);
         }
+
         public string GetStorageType()
         {
             return _data.GetType().Name;
